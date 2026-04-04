@@ -1,0 +1,444 @@
+
+
+A W S   A c a d e m y   C l o u d   F o u n d a t i o n s
+Module 3: AWS Global Infrastructure Overview
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Module overview
+Topics
+•AWS Global Infrastructure
+•AWS service and service category 
+overview
+Demo
+•AWS Global Infrastructure
+Activities
+•AWS Management Console clickthrough
+Knowledge check
+2© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Module objectives
+After completing this module, you should be able to:
+•Identify the difference between AWS Regions, Availability Zones, and edge 
+locations
+•Identify AWS service and service categories
+3© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Section 1: AWS Global Infrastructure
+M o d u l e   3 :   A W S   G l o b a l   I n f r a s t r u c t u r e   O v e r v i e w
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+AWS Global Infrastructure
+•The AWS Global Infrastructure is designed and built to deliver a flexible, reliable, scalable, and secure cloud 
+computing environment with high-quality global network performance. 
+•This map from https://infrastructure.aws shows the current AWS Regions and more that are coming soon.
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.5
+
+Educator-Led Demo: 
+AWS Global 
+Infrastructure Details
+6© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+AWS Regions
+•An AWS Region is a geographical area.
+•Data replication across Regions is controlled by 
+you.
+•Communication between Regions uses AWS 
+backbone network infrastructure.
+•Each Region provides full redundancy and 
+connectivity to the network.
+•A Region typically consists of two or more 
+Availability Zones.
+Example: London Region
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.7
+
+Selecting a Region
+Determine the right Region for 
+your services, applications, and 
+data based on these factors
+Data governance, legal 
+requirements
+Proximity to customers 
+(latency)
+Services available 
+within the Region
+Costs (vary by Region)
+8© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Availability Zones
+•Each Region has multiple Availability Zones.
+•Each Availability Zone is a fully isolated partition of 
+the AWS infrastructure.
+•There are currently 69 Availability Zones worldwide
+•Availability Zones consist of discrete data centers
+•They are designed for fault isolation
+•They are interconnected with other Availability Zones by using 
+high-speed private networking
+•You choose your Availability Zones.
+•AWS recommends replicating data and resources across 
+Availability Zones for resiliency.
+AWS Cloud
+Region eu-west-1
+Availability Zone eu-west-1a
+Data center 
+Data center 
+Data center 
+Availability Zone eu-west-1b
+Availability Zone eu-west-1c
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.9
+
+AWS data centers
+•AWS data centers are designed for 
+security.
+•Data centers are where the data resides 
+and data processing occurs.
+•Each data center has redundant power, 
+networking, and connectivity, and is 
+housed in a separate facility.
+•A data center typically has 50,000 to 
+80,000 physical servers.
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.10
+
+Points of Presence
+•AWS provides a global network of 
+187 Points of Presence locations 
+•Consists of 176 edge locations and 
+11 Regional edge caches
+•Used with Amazon CloudFront 
+•A global Content Delivery Network 
+(CDN), that delivers content to end 
+users with reduced latency
+•Regional edge caches used for 
+content with infrequent access.
+11© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+AWS infrastructure features 
+•Elasticity and scalability
+•Elastic infrastructure; dynamic adaption of capacity
+•Scalable infrastructure; adapts to accommodate growth 
+•Fault-tolerance
+•Continues operating properly in the presence of a failure
+•Built-in redundancy of components
+•High availability
+•High level of operational performance
+•Minimized downtime
+•No human intervention
+AWS Region
+Availability Zone
+Data center
+Data center
+Data centerData center
+Data center
+Data center
+Data centerData center
+Data center
+Data center
+Data centerData center
+Availability Zone
+Availability Zone
+Physically distinct
+Uninterruptible 
+power supply
+Backup 
+generators
+Cooling 
+equipment
+Network 
+connectivity
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.12
+
+Key takeaways
+•The AWS Global Infrastructure consists of 
+Regions and Availability Zones.
+•Your choice of a Region is typically based 
+on compliance requirements or to reduce 
+latency.
+•Each Availability Zone is physically 
+separate from other Availability Zones and 
+has redundant power, networking, and 
+connectivity.
+•Edge locations, and Regional edge caches 
+improve performance by caching content 
+closer to users.
+13© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Section 2: AWS services and service category overview
+M o d u l e   3 :   A W S   G l o b a l   I n f r a s t r u c t u r e   O v e r v i e w
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+AWS foundational services
+Infrastructure
+RegionsEdge locationsAvailability Zones
+Foundation
+Services
+Compute (virtual, 
+automatic scaling, and 
+load balancing)
+Networking
+Applications
+Virtual desktops
+Collaboration and sharing
+Platform
+Services
+Caching
+Relational
+NoSQL
+Cluster 
+computing
+Real-time
+Data 
+workflows
+Data 
+warehouse
+Queuing
+Orchestration
+App Streaming
+Transcoding
+Email
+Search
+Containers
+DevOps tools
+Resource templates
+Usage tracking
+Monitoring and logs
+Identity
+Sync
+Mobile 
+Analytics
+Notifications
+Application 
+services
+Storage (object, 
+block, and archive)
+AnalyticsDeployment and 
+management
+Mobile 
+Services
+Databases
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.15
+
+AWS categories of services
+Networking and
+Content Delivery
+Mobile
+Internet 
+of Things
+Compute
+Analytics
+Management and 
+Governance
+Storage
+Developer Tools
+Security, Identity, and
+ Compliance
+Database
+Business 
+Applications
+Machine 
+Learning
+Blockchain
+Application
+Integration
+AR and VR
+End User 
+Computing
+Media Services
+Migration and 
+Transfer
+Game Tech
+Satellite
+Customer 
+Engagement
+Cost 
+Management
+Robotics
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+16
+
+Storage service category
+AWS storage services
+17© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+Amazon Elastic Block 
+Store (Amazon EBS)
+Amazon Elastic 
+File System 
+(Amazon EFS)
+Amazon Simple Storage 
+Service (Amazon S3)
+Amazon Simple Storage 
+Service 
+Glacier
+Photo from https://www.pexels.com/photo/black-and-grey-device-159282/
+
+Compute service category
+AWS Compute services
+Amazon EC2
+Amazon EC2 
+Auto Scaling
+Amazon Elastic 
+Container Service 
+(Amazon ECS)
+AWS Elastic 
+Beanstalk
+AWS Lambda
+Amazon Elastic 
+Kubernetes Service 
+(Amazon EKS)
+Photo from https://www.pexels.com/photo/technology-computer-lines-board-50711/
+Amazon EC2 
+Container Registry
+AWS Fargate
+18© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Database service category
+AWS Database services
+Amazon Relational 
+Database Service
+Amazon Aurora
+Amazon 
+DynamoDB
+Amazon Redshift
+Photo from https://aws.amazon.com/compliance/data-center/data-centers/
+19© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Networking and content delivery service 
+category
+AWS networking 
+and content delivery services
+Amazon VPC
+Elastic Load 
+Balancing
+AWS Direct 
+Connect
+Amazon 
+CloudFront
+Amazon 
+Route 53
+Photo by Umberto on Unsplash
+AWS Transit 
+Gateway 
+AWS VPN
+20© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Security, identity, and compliance service 
+category
+AWS security, identity, 
+and compliance services
+AWS Identity and Access 
+Management (IAM)
+AWS 
+Organizations
+Amazon Cognito
+AWS Artifact
+AWS Key 
+Management 
+Service 
+AWS Shield
+Photo byPaweł CzerwińskionUnsplash
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.21
+
+AWS cost management service category
+AWS cost management 
+services
+AWS Cost and 
+Usage Report
+AWS Budgets
+AWS Cost 
+Explorer
+Photo by Alexander Mils on Unsplash
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.22
+
+Management and governance service category
+AWS management and 
+governance services
+AWS Management 
+Console
+AWS Config
+Amazon 
+CloudWatch
+AWS Auto 
+Scaling
+AWS Command 
+Line Interface
+AWS Trusted 
+Advisor
+AWS Well-
+Architected Tool 
+AWS 
+CloudTrail
+Photo by Marta Branco from Pexels
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.23
+
+Activity: AWS 
+Management Console 
+clickthrough
+Photo by Pixabay from Pexels.
+24© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Hands-on activity:  AWS Management Console 
+clickthrough
+1.Launch the Sandbox hands-on environment and connect to the AWS Management Console.
+2.Explore the AWS Management Console. 
+A.Click the Services menu. 
+B.Notice how services are grouped into service categories. For example, the EC2 service appears in the Compute service category.
+       Question #1: Under which service category does the IAM service appear? 
+       Question #2: Under which service category does the Amazon VPC service appear?
+C.Click the Amazon VPC service. Notice that the dropdown menu in the top-right corner displays an AWS Region (for example, it 
+might display N. Virginia). 
+D.Click the Region menu and switch to a different Region. For example, choose EU (London).
+E.Click Subnets (on the left side of the screen). The Region has three subnets in it. Click the box next to one of the subnets. Notice 
+that the bottom half of the screen now displays details about this subnet. 
+      Question #3: Does the subnet you selected exist at the level of the Region or at the level of the Availability Zone?
+F.Click Your VPCs. An existing VPC is already selected. 
+      Question #4: Does the VPC exist at the level of the Region or the level of the Availability Zone?
+      Question #5: Which services are global instead of Regional? Check Amazon EC2, IAM, Lambda, and Route 53. 
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.25
+
+Activity answer key
+•Question #1: Under which service category does the IAM service appear? 
+•Answer: Security, Identity, & Compliance.
+•Question #2: Under which service category does the Amazon VPC service appear?
+•Answer: Networking & Content Delivery
+•Question #3: Does the subnet that you selected exist at the level of the Region or the level of the 
+Availability Zone?
+•Answer: Subnets exist at the level of the Availability Zone.
+•Question #4: Does the VPC exist at the level of the Region or the level of the Availability Zone?
+•Answer: VPCs exist at the Region level.
+•Question #5: Which of the following services are global instead of Regional? Check Amazon EC2, IAM, 
+Lambda, and Route 53.
+•Answer: IAM and Route 53 are global. Amazon EC2 and Lambda are Regional.
+26© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Module wrap-up
+M o d u l e   3 :   A W S   G l o b a l   I n f r a s t r u c t u r e   O v e r v i e w
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Module summary                                                     
+In summary, in this module you learned how to:
+•Identify the difference between AWS Regions, Availability Zones, and edge 
+locations
+•Identify AWS service and service categories
+28© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Complete the knowledge check
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.29
+
+Sample exam question
+Which component of AWS global infrastructure does Amazon CloudFront use 
+to ensure low-latency delivery?
+A.AWS Regions
+B.AWS edge locations
+C.AWS Availability Zones
+D.Amazon Virtual Private Cloud (Amazon VPC)
+30© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+31
+•AWS Global Infrastructure
+•AWS Global Infrastructure Region Table
+•AWS Cloud Products
+Additional resources
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+© 2019 Amazon Web Services, Inc. or its affiliates. All rights reserved. This work may not be reproduced or redistributed, in whole or in part, without prior written permission from Amazon 
+Web Services, Inc. Commercial copying, lending, or selling is prohibited. Corrections or feedback on the course, please email us at:aws-course-feedback@amazon.com. For all other 
+questions, contact us at: https://aws.amazon.com/contact-us/aws-training/. All trademarks are the property of their owners.
+Thank you

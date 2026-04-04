@@ -1,0 +1,898 @@
+[
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-0",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 0,
+    "text": "Module 1: Cloud Concepts Overview A W S A c a d e m y C l o u d F o u n d a t i o n s © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Module overview Topics •Introduction to cloud computing •Advantages of cloud computing •Introduction to Amazon Web Services (AWS) •AWS Cloud Adoption Framework (AWS CAF) Knowledge check © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.2 Module objectives After completing this module, you should be able to: •Define different types of cloud computing models •Describe six advantages of cloud computing •Recognize the main AWS service categories and core services •Review the AWS Cloud Adoption Framework (AWS CAF) © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.3 M o d u l e 1 : C l o u d C o n c e p t s O v e r v i e w Section 1: Introduction to cloud computing © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. What is cloud computing? © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.5 Cloud computing defined Cloud computing is the on-demand delivery of compute power, database, storage, applications, and other IT resources via the internet"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-1",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 1,
+    "text": ". or its Affiliates. All rights reserved.5 Cloud computing defined Cloud computing is the on-demand delivery of compute power, database, storage, applications, and other IT resources via the internet with pay-as- you-go pricing. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.6 Infrastructure as software Cloud computing enables you to stop thinking of your infrastructure as hardware, and instead think of (and use) it as software. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.7 Traditional computing model •Infrastructure as hardware •Hardware solutions: •Require space, staff, physical security, planning, capital expenditure •Have a long hardware procurement cycle •Require you to provision capacity by guessing theoretical maximum peaks © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.8 Cloud computing model •Infrastructure as software •Software solutions: •Are flexible •Can change more quickly, easily, and cost-effectively than hardware solutions •Eliminate the undifferentiated heavy- lifting tasks © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.9 Cloud service models IaaS (infrastructure"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-2",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 2,
+    "text": "ctively than hardware solutions •Eliminate the undifferentiated heavy- lifting tasks © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.9 Cloud service models IaaS (infrastructure as a service) More control over IT resources PaaS (platform as a service) SaaS (software as a service) Less control over IT resources © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.10 Cloud computing deployment models CloudHybridOn-premises (private cloud) © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.11 Similarities between AWS and traditional IT Traditional, on-premises IT space AWS FirewallsACLs Administrators Network ACLs IAM Router Network pipeline Switch Elastic Load BalancingAmazon VPC On-premises servers AMI Amazon EC2 instances RDBMS Security Networking Compute Storage and database Amazon EBSAmazon EFS Amazon S3 Amazon RDS Security groups DASSANNAS © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.12 Section 1 key takeaways •Cloud computing is the on-demand delivery of IT resources via the internet with pay-as-you-go pricing. •Cloud computing enables you to think of (and use) your infrastructure as softw"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-3",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 3,
+    "text": "1 key takeaways •Cloud computing is the on-demand delivery of IT resources via the internet with pay-as-you-go pricing. •Cloud computing enables you to think of (and use) your infrastructure as software. •There are three cloud service models: IaaS, PaaS, and SaaS. •There are three cloud deployment models: cloud, hybrid, and on-premises or private cloud. •Almost anything you can implement with traditional IT can also be implemented as an AWS cloud computing service. 13© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. M o d u l e 1 : C l o u d C o n c e p t s O v e r v i e w Section 2: Advantages of cloud computing © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Trade capital expense for variable expense Capital Data center investment based on forecast Pay only for the amount you consume © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.15 Massive economies of scale Because of aggregate usage from all customers, AWS can achieve higher economies of scale and pass savings on to customers. AWS Cloud Economies of scale Savings © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.16 Stop guessing cap"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-4",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 4,
+    "text": "an achieve higher economies of scale and pass savings on to customers. AWS Cloud Economies of scale Savings © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.16 Stop guessing capacity Overestimated server capacity Underestimated server capacity Scaling on demand © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.17 Increase speed and agility Weeks between wanting resources and having resources Launch Minutes between wanting resources and having resources © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.18 Stop spending money on running and maintaining data centers Payroll .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... Utilities .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... Maintenance .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... Landscaping .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... Hardware .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... Running data centers Investment"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-5",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 5,
+    "text": "... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... Hardware .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... .... ... .. ... Running data centers Investment Business and customers © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.19 Go global in minutes © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.20 Section 2 key takeaways •Trade capital expense for variable expense •Benefit from massive economies of scale •Stop guessing capacity •Increase speed and agility •Stop spending money on running and maintaining data centers •Go global in minutes 21© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. M o d u l e 1 : C l o u d C o n c e p t s O v e r v i e w Section 3: Introduction to Amazon Web Services (AWS) © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. What are web services? A web service is any piece of software that makes itself available over the internet and uses a standardized format—such as Extensible Markup Language (XML) or JavaScript Object Notation (JSON)—for the request and the response of an application programming interface (API) interac"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-6",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 6,
+    "text": "rnet and uses a standardized format—such as Extensible Markup Language (XML) or JavaScript Object Notation (JSON)—for the request and the response of an application programming interface (API) interaction. Web service Client Response message Request message Internet © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.23 What is AWS? •AWS is a secure cloud platform that offers a broad set of global cloud- based products. •AWS provides you with on-demand access to compute, storage, network, database, and other IT resources and management tools. •AWS offers flexibility. •You pay only for the individual services you need, for as long as you use them. •AWS services work together like building blocks. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.24 Categories of AWS services Developer Tools Security, Identity, and Compliance Blockchain Media Services Storage Business Applications End User Computing Migration and Transfer Mobile Compute Game Tech Management and Governance Database AR and VR SatelliteNetworking and Content Delivery Internet of Things Analytics Cost Management Machine Learning Application Integration Customer Engagement Robotic"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-7",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 7,
+    "text": "Management and Governance Database AR and VR SatelliteNetworking and Content Delivery Internet of Things Analytics Cost Management Machine Learning Application Integration Customer Engagement Robotics © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. 25 Simple solution example NetworkingCompute Storage Database AWS Cloud Virtual Private Cloud (VPC) Amazon EC2 Amazon S3 Amazon DynamoDB Users © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.26 Choosing a service The service you select depends on your business goals and technology requirements. Amazon Lightsail AWS Batch AWS Outposts VMware Cloud on AWS Amazon ECS Amazon EKS AWS Fargate Amazon EC2 AWS Lambda AWS Elastic Beanstalk ? © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.27 Services covered in this course AWS Cost Management services – •AWS Cost & Usage Report •AWS Budgets •AWS Cost Explorer Management and Governance services – •AWS Trusted Advisor •AWS CloudWatch •AWS CloudTrail •AWS Well-Architected Tool •AWS Auto Scaling •AWS Command Line Interface •AWS Config •AWS Management Console •AWS Organizations Compute services – •Amazon EC2 •AWS Lambda •AWS Elas"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-8",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 8,
+    "text": "tch •AWS CloudTrail •AWS Well-Architected Tool •AWS Auto Scaling •AWS Command Line Interface •AWS Config •AWS Management Console •AWS Organizations Compute services – •Amazon EC2 •AWS Lambda •AWS Elastic Beanstalk •Amazon EC2 Auto Scaling •Amazon ECS •Amazon EKS •Amazon ECR •AWS Fargate Networking and Content Delivery services – •Amazon VPC •Amazon Route 53 •Amazon CloudFront •Elastic Load Balancing Storage services – •Amazon S3 •Amazon S3 Glacier •Amazon EFS •Amazon EBS Database services – •Amazon RDS •Amazon DynamoDB •Amazon Redshift •Amazon Aurora Security, Identity, and Compliance services – •AWS IAM •Amazon Cognito •AWS Shield •AWS Artifact •AWS KMS © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.28 Three ways to interact with AWS AWS Management Console Easy-to-use graphical interface Command Line Interface (AWS CLI) Access to services by discrete commands or scripts Software Development Kits (SDKs) Access services directly from your code (such as Java, Python, and others) © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.29 Section 3 key takeaways •AWS is a secure cloud platform that offers a broad set of global cloud-based produc"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-9",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 9,
+    "text": "hon, and others) © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.29 Section 3 key takeaways •AWS is a secure cloud platform that offers a broad set of global cloud-based products called services that are designed to work together. •There are many categories of AWS services, and each category has many services to choose from. •Choose a service based on your business goals and technology requirements. •There are three ways to interact with AWS services. 30© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. M o d u l e 1 : C l o u d C o n c e p t s O v e r v i e w Section 4: Moving to the AWS Cloud – The AWS Cloud Adoption Framework (AWS CAF) © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. AWS Cloud Adoption Framework (AWS CAF) AWS CAF perspectives •AWS CAF provides guidance and best practices to help organizations build a comprehensive approach to cloud computing across the organization and throughout the IT lifecycle to accelerate successful cloud adoption. •AWS CAF is organized into six perspectives. •Perspectives consist of sets of capabilities. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights rese"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-10",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 10,
+    "text": "to accelerate successful cloud adoption. •AWS CAF is organized into six perspectives. •Perspectives consist of sets of capabilities. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.32 Six core perspectives Focus on business capabilities Focus on technical capabilities © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.33 Business perspective IT finance IT strategy Benefits realization Business risk management Business perspective capabilities We must ensure that IT is aligned with business needs, and that IT investments can be traced to demonstrable business results. Business managers, finance managers, budget owners, and strategy stakeholders © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.34 People perspective Resource management Incentive management Career management Training management Organizational change management People perspective capabilities We must prioritize training, staffing, and organizational changes to build an agile organization. Human resources, staffing, and people managers © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.35 Governance perspective Portfolio management P"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-11",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 11,
+    "text": "to build an agile organization. Human resources, staffing, and people managers © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.35 Governance perspective Portfolio management Program and project management Business performance measurement License management Governance perspective capabilities We must ensure that skills and processes align IT strategy and goals with business strategy and goals so the organization can maximize the business value of its IT investment and minimize business risks. CIO, program managers, enterprise architects, business analysts, and portfolio managers © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.36 Platform perspective Compute provisioning Network provisioning Storage provisioning Database provisioning Systems and solution architecture Application development Platform perspective capabilities We must understand and communicate the nature of IT systems and their relationships. We must be able to describe the architecture of the target state environment in detail. CTO, IT managers, and solutions architects © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.37 Security perspective Ident"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-12",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 12,
+    "text": "architecture of the target state environment in detail. CTO, IT managers, and solutions architects © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.37 Security perspective Identity and access management Detective control Infrastructure security Data protection Incident response Security perspective capabilities We must ensure that the organization meets its security objectives. CISO, IT security managers, and IT security analysts © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.38 Operations perspective Service monitoring Application performance monitoring Resource inventory management Release management/ change management Reporting and analytics Business continuity/ Disaster recovery IT service catalog Operations perspective capabilities We align with and support the operations of the business, and define how day-to-day, quarter-to- quarter, and year-to-year business will be conducted. IT operations managers and IT support managers © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. 39 Section 4 key takeaways •Cloud adoption is not instantaneous for most organizations and requires a thoughtful, deliberate strategy"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-13",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 13,
+    "text": "Amazon Web Services, Inc. or its Affiliates. All rights reserved. 39 Section 4 key takeaways •Cloud adoption is not instantaneous for most organizations and requires a thoughtful, deliberate strategy and alignment across the whole organization. •The AWS CAF was created to help organizations develop efficient and effective plans for their cloud adoption journey. •The AWS CAF organizes guidance into six areas of focus, called perspectives. •Perspectives consist of sets of business or technology capabilities that are the responsibility of key stakeholders. 40© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. M o d u l e 1 : C l o u d C o n c e p t s O v e r v i e w Module wrap-up © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Module summary In summary, in this module you learned how to: •Define different types of cloud computing models •Describe six advantages of cloud computing •Recognize the main AWS service categories and core services •Review the AWS Cloud Adoption Framework © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.42 Complete the knowledge check © 2019 Amazon Web Services, Inc. or its Affiliates. All r"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-14",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 14,
+    "text": "eview the AWS Cloud Adoption Framework © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.42 Complete the knowledge check © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.43 Sample exam question Why is AWS more economical than traditional data centers for applications with varying compute workloads? A.Amazon Elastic Compute Cloud (Amazon EC2) costs are billed on a monthly basis. B.Customers retain full administrative access to their Amazon EC2 instances. C.Amazon EC2 instances can be launched on-demand when needed. D.Customers can permanently run enough instances to handle peak workloads. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.44 Additional resources •What is AWS? YouTube video •Cloud computing with AWS website •Overview of Amazon Web Services whitepaper •An Overview of the AWS Cloud Adoption Framework whitepaper •6 Strategies for Migrating Applications to the Cloud AWS Cloud Enterprise Strategy blog post © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.45 © 2019 Amazon Web Services, Inc. or its affiliates. All rights reserved. This work may not be reproduced or redistributed, in who"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_01.pdf-chunk-15",
+    "document": "AcademyCloudFoundations_Module_01.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 15,
+    "text": "19 Amazon Web Services, Inc. or its Affiliates. All rights reserved.45 © 2019 Amazon Web Services, Inc. or its affiliates. All rights reserved. This work may not be reproduced or redistributed, in whole or in part, without prior written permission from Amazon Web Services, Inc. Commercial copying, lending, or selling is prohibited. Corrections or feedback on the course, please email us at:aws-course-feedback@amazon.com. For all other questions, contact us at: https://aws.amazon.com/contact-us/aws-training/. All trademarks are the property of their owners. Thank You"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-0",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 0,
+    "text": "A W S A c a d e m y C l o u d F o u n d a t i o n s Module 2: Cloud Economics and Billing © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. Module overview Topics •Fundamentals of pricing •Total Cost of Ownership •Simple Monthly Calculator •Introduction to AWS Organizations •AWS Billing and Cost Management •Overview of AWS Technical Support plans and costs Demo •Overview of the Billing Dashboard Activities •Simple Monthly Calculator •Support plans scavenger hunt Knowledge check © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.2 Module objectives After completing this module, you should be able to: •Explain the AWS pricing philosophy •Recognize fundamental pricing characteristics •Indicate the elements of total cost of ownership •Discuss the results of the Simple Monthly Calculator •Identify how to set up an organizational structure that simplifies billing and account visibility to review cost data. •Identify the functionality in the AWS Billing Dashboard •Describe how to use AWS Bills, AWS Cost Explorer, AWS Budgets, and AWS Cost and Usage Reports •Identify the various AWS technical support plans and features © 2019 Amazon Web Services"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-1",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 1,
+    "text": "lling Dashboard •Describe how to use AWS Bills, AWS Cost Explorer, AWS Budgets, and AWS Cost and Usage Reports •Identify the various AWS technical support plans and features © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.3 M o d u l e 2 : C l o u d E c o n o m i c s a n d B i l l i n g Section 1: Fundamentals of pricing © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. AWS pricing model Three fundamental drivers of cost with AWS Compute •Charged per hour/second* •Varies by instance type *Linux only Storage •Charged typically per GB Data transfer •Outbound is aggregated and charged •Inbound has no charge (with some exceptions) •Charged typically per GB © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.5 How do you pay for AWS? Pay for what you usePay less when you reservePay less when you use more and as AWS grows © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.6 Pay for what you use Pay only for the services that you consume, with no large upfront expenses. AWS On premises © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.7 Pay less when you reserve Invest in Reserved"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-2",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 2,
+    "text": "or the services that you consume, with no large upfront expenses. AWS On premises © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.7 Pay less when you reserve Invest in Reserved Instances (RIs): •Save up to 75 percent •Options: •All Upfront Reserved Instance (AURI) → largest discount •Partial Upfront Reserved Instance (PURI) → lower discounts •No Upfront Payments Reserved Instance (NURI) → smaller discount On Demand NURIPURIAURI EC2 instance © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.8 Pay less by using more Realize volume-based discounts: •Savings as usage increases. •Tiered pricing for services like Amazon Simple Storage Service (Amazon S3), Amazon Elastic Block Store (Amazon EBS), or Amazon Elastic File System (Amazon EFS) → the more you use, the less you pay per GB. •Multiple storage services deliver lower storage costs based on needs. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.9 Pay even less as AWS grows As AWS grows: •AWS focuses on lowering cost of doing business. •This practice results in AWS passing savings from economies of scale to you. •Since 2006, AWS has lowered pricing 75 times (as of S"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-3",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 3,
+    "text": "rows As AWS grows: •AWS focuses on lowering cost of doing business. •This practice results in AWS passing savings from economies of scale to you. •Since 2006, AWS has lowered pricing 75 times (as of September 2019). •Future higher-performing resources replace current resources for no extra charge. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.10 Custom pricing •Meet varying needs through custom pricing. •Available for high-volume projects with unique requirements. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.11 AWS Free Tier Enables you to gain free hands-on experience with the AWS platform, products, and services. Free for 1 year for new customers. Sign up for an AWS account Learn with 10- minute tutorials Start building with AWS © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.12 Services with no charge Amazon VPC Elastic Beanstalk** Auto Scaling** AWS CloudFormation** AWS Identity and Access Management (IAM) **Note: There might be charges associated with other AWS services that are used with these services. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.13 Key takeaways •There is"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-4",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 4,
+    "text": "**Note: There might be charges associated with other AWS services that are used with these services. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.13 Key takeaways •There is no charge for: •Inbound data transfer. •Data transfer between services within the same AWS Region. •Pay for what you use. •Start and stop anytime. •No long-term contracts are required. •Some services are free, but the other AWS services that they provision might not be free. 14© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. M o d u l e 2 : C l o u d E c o n o m i c s a n d B i l l i n g Section 2: Total Cost of Ownership © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. On-premises versus cloud Traditional Infrastructure AWS Cloud Equipment Resources and administration CostContracts Scale up and down No upfront expense—pay for what you use Improve time to market and agility Self-service infrastructure ≠ © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.16 What is Total Cost of Ownership (TCO)? Total Cost of Ownership (TCO) is the financial estimate to help identify direct and indirect costs of a system. Why use TCO?"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-5",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 5,
+    "text": "s Affiliates. All rights reserved.16 What is Total Cost of Ownership (TCO)? Total Cost of Ownership (TCO) is the financial estimate to help identify direct and indirect costs of a system. Why use TCO? •To compare the costs of running an entire infrastructure environment or specific workload on-premises versus on AWS •To budget and build the business case for moving to the cloud © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.17 TCO considerations Server administration costs 4 IT Labor Costs Hardware: Server, rack chassis power distribution units (PDUs), top-of-rack (TOR) switches (and maintenance) Software: Operating system (OS), virtualization licenses (and maintenance) Facilities cost SpacePowerCooling Server Costs 1 Hardware: Storage disks, storage area network (SAN) or Fibre Channel (FC) switches Storage administration costs Facilities cost SpacePowerCooling Storage Costs 2 Network hardware: Local area network (LAN) switches, load balancer bandwidth costs Network administration costs Facilities cost SpacePowerCooling Network Costs 3 © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.18 On-premises versus all-in-cloud You could save u"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-6",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 6,
+    "text": "twork administration costs Facilities cost SpacePowerCooling Network Costs 3 © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.18 On-premises versus all-in-cloud You could save up to 96 percent a year by moving your infrastructure to AWS. Your 3-year total savings would be $159,913. AWS cost includes business-level support and a 3-year PURI EC2 instance 0 50000 100000 150000 200000 250000 300000 350000 400000 On-PremisesAWS ServerStorageNetworkIT-LaborTotal © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.19 AWS Simple Monthly Calculator Use the Simple Monthly Calculator to: •Estimate monthly costs •Identify opportunities to reduce monthly costs •Use templates to compare services and deployment models Access the Simple Monthly Calculator: http://calculator.s3.amazonaws.com/index.html © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.20 AWS TCO calculator Use the TCO Calculator to: •Estimate cost savings •Use detailed reports •Modify assumptions Access the TCO Calculator © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.21 Additional benefit considerations Hard benefits •Reduced spending on comp"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-7",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 7,
+    "text": "ports •Modify assumptions Access the TCO Calculator © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.21 Additional benefit considerations Hard benefits •Reduced spending on compute, storage, networking, security •Reductions in hardware and software purchases (capex) •Reductions in operational costs, backup, and disaster recovery •Reduction in operations personnel Soft Benefits •Reuse of service and applications that enable you to define (and redefine solutions) by using the same cloud service •Increased developer productivity •Improved customer satisfaction •Agile business processes that can quickly respond to new and emerging opportunities •Increase in global reach © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.22 Case study: Total Cost Of Ownership Background: •Growing global company with over 200 locations •500 million customers, $3 billion annual revenue © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.23 Case study: Total Cost of Ownership Background: Challenge: •Growing global company with over 200 locations •500 million customers, $3 billion annual revenue •Meet demand to rapidly deploy new solutions •Con"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-8",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 8,
+    "text": "tudy: Total Cost of Ownership Background: Challenge: •Growing global company with over 200 locations •500 million customers, $3 billion annual revenue •Meet demand to rapidly deploy new solutions •Constantly upgrade aging equipment © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.24 Case study: Total Cost of Ownership Background: Challenge: Criteria: •Growing global company with over 200 locations •500 million customers, $3 billion annual revenue •Meet demand to rapidly deploy new solutions •Constantly upgrade aging equipment •Broad solution to handle all workloads •Ability to modify processes to improve efficiency and lower costs •Eliminate busy work (such as patching software) •Achieve a positive return on investment (ROI) © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.25 Case study: Total Cost of Ownership Background: Challenge: Criteria: Solution: •Is a growing global company with over 200 locations •Have 500 million customers, $3 billion (USD) annual revenue •Meet demand to rapidly deploy new solutions •Constantly upgrade aging equipment •Have a broad solution to handle all workloads •Be able to modify processes to improve effici"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-9",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 9,
+    "text": "lion (USD) annual revenue •Meet demand to rapidly deploy new solutions •Constantly upgrade aging equipment •Have a broad solution to handle all workloads •Be able to modify processes to improve efficiency and lower costs •Eliminate busy work (such as patching software) •Achieve a positive return on investment (ROI) •Moved their on-premises data center to AWS •Eliminated 205 servers (90 percent) •Moved nearly all applications to AWS •Used 3-year Amazon EC2 Reserved Instances © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.26 Case study: Total Cost of Ownership © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.27 Case study: Total Cost of Ownership Results: Business Goals: Growth Enhanced 24/7 business Operational efficiency Speed to market •One day to provision new businesses •Just minutes to push out a service Resource optimization •Robust security compliance •Enhanced disaster recovery •Increased computing capacity Operational efficiency •Continuous cost optimization and reduction © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.28 Activity: Simple Monthly Calculator activity •Break up into groups of four or five"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-10",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 10,
+    "text": "Continuous cost optimization and reduction © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.28 Activity: Simple Monthly Calculator activity •Break up into groups of four or five and use the specifications provided to develop a cost estimate using the Amazon Simple Monthly Calculator •Be prepared to report your findings back to the class. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.29 M o d u l e 2 : C l o u d E c o n o m i c s a n d B i l l i n g Section 3: Billing © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Introduction to AWS Organizations AWS Organizations © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.31 AWS Organizations terminology *Organizational Units (OUs) © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. 32 Key features and benefits Consolidated billing Policy-based account management Group based account management Application programming interfaces (APIs) that automate account management AWS Organizations © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.33 Security with AWS Organizations Control access with AWS Identity an"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-11",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 11,
+    "text": "(APIs) that automate account management AWS Organizations © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.33 Security with AWS Organizations Control access with AWS Identity and Access Management (IAM). IAM policies enable you to allow or deny access to AWS services for users, groups, and roles. Service control policies (SCPs) enable you to allow or deny access to AWS services for individuals or group accounts in an organizational unit (OU). © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.34 Organizations setup Step 1 Step 2 Step 3 Step 4 Create Organization Create organizational units Create service control policies Test restrictions © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.35 Limits of AWS Organizations © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.36 Accessing AWS Organizations AWS Organizations AWS Management Console AWS Command Line Interface (AWS CLI) tools Software development kits (SDKs) HTTPS Query application programming interfaces (API) © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.37 Introducing AWS Billing and Cost Management © 2019 Amazon"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-12",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 12,
+    "text": "t kits (SDKs) HTTPS Query application programming interfaces (API) © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.37 Introducing AWS Billing and Cost Management © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.38 AWS Billing Dashboard © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.39 Tools AWS Budgets AWS Cost and Usage Report AWS Cost Explorer © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.40 Monthly bills © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.41 Cost Explorer © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.42 Forecast and track costs © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.43 Cost and usage reporting © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.44 © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Recorded demo: Amazon Billing dashboard 45 Amazon Billing dashboard demo Billing dashboard demonstration © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.46 M o d u l e 2 : C l o u d E c o n o m i c s a n d B i l l i n g Section 4:"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-13",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 13,
+    "text": "ing dashboard demo Billing dashboard demonstration © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.46 M o d u l e 2 : C l o u d E c o n o m i c s a n d B i l l i n g Section 4: Technical support © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. AWS support •Provide unique combination of tools and expertise: •AWS Support •AWS Support Plans •Support is provided for: •Experimenting with AWS •Production use of AWS •Business-critical use of AWS © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.48 AWS support •Proactive guidance : •Technical Account Manager (TAM) •Best practices : •AWS Trusted Advisor •Account assistance : •AWS Support Concierge © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.49 Support plans AWS Support offers four support plans: •Basic Support – Resource Center access, Service Health Dashboard, product FAQs, discussion forums, and support for health checks •Developer Support: Support for early development on AWS •Business Support: Customers that run production workloads •Enterprise Support: Customers that run business and mission-critical workloads © 2019 Amazon Web Services, I"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-14",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 14,
+    "text": "rt for early development on AWS •Business Support: Customers that run production workloads •Enterprise Support: Customers that run business and mission-critical workloads © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.50 Case severity and response times © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.51 Activity: Support plan scavenger hunt •Break up into groups of four or five and develop a recommendation for the best support plan for one of the business cases that are provided. •Be prepared to report your findings back to the class. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.52 M o d u l e 2 : C l o u d E c o n o m i c s a n d B i l l i n g Module wrap-up © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Module summary •Explored the fundamental of AWS pricing •Reviewed TCO concepts •Introduced the AWS Simple Monthly Calculator and the TCO Calculator •Reviewed the Billing dashboard •Reviewed Technical Support options and costs © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.54 Complete the knowledge check © 2019 Amazon Web Services, Inc. or its Affiliates. A"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-15",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 15,
+    "text": "viewed Technical Support options and costs © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.54 Complete the knowledge check © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.55 Sample exam question Which AWS service provides infrastructure security optimization recommendations? A.AWS Price List Application Programming Interface (API) B.Reserved Instances C.AWS Trusted Advisor D.Amazon Elastic Compute Cloud (Amazon EC2) Spot Fleet © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.56 Additional resources •AWS Economics Center: http://aws.amazon.com/economics/ •AWS TCO Calculator: https://awstcocalculator.com •Simple Monthly Calculator: https://calculator.s3.amazonaws.com/index.html •Case studies and research: http://aws.amazon.com/economics/ •Additional pricing exercises: http://awscostlabs.com © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.57 © 2019 Amazon Web Services, Inc. or its affiliates. All rights reserved. This work may not be reproduced or redistributed, in whole or in part, without prior written permission from Amazon Web Services, Inc. Commercial copying, lending, or selling is pro"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_02.pdf-chunk-16",
+    "document": "AcademyCloudFoundations_Module_02.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 16,
+    "text": "l rights reserved. This work may not be reproduced or redistributed, in whole or in part, without prior written permission from Amazon Web Services, Inc. Commercial copying, lending, or selling is prohibited. Corrections or feedback on the course, please email us at:aws-course-feedback@amazon.com. For all other questions, contact us at: https://aws.amazon.com/contact-us/aws-training/. All trademarks are the property of their owners. Thank you"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_03.pdf-chunk-0",
+    "document": "AcademyCloudFoundations_Module_03.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 0,
+    "text": "A W S A c a d e m y C l o u d F o u n d a t i o n s Module 3: AWS Global Infrastructure Overview © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. Module overview Topics •AWS Global Infrastructure •AWS service and service category overview Demo •AWS Global Infrastructure Activities •AWS Management Console clickthrough Knowledge check 2© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Module objectives After completing this module, you should be able to: •Identify the difference between AWS Regions, Availability Zones, and edge locations •Identify AWS service and service categories 3© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Section 1: AWS Global Infrastructure M o d u l e 3 : A W S G l o b a l I n f r a s t r u c t u r e O v e r v i e w © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. AWS Global Infrastructure •The AWS Global Infrastructure is designed and built to deliver a flexible, reliable, scalable, and secure cloud computing environment with high-quality global network performance. •This map from https://infrastructure.aws shows the current AWS Regions and more that are coming"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_03.pdf-chunk-1",
+    "document": "AcademyCloudFoundations_Module_03.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 1,
+    "text": "eliable, scalable, and secure cloud computing environment with high-quality global network performance. •This map from https://infrastructure.aws shows the current AWS Regions and more that are coming soon. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.5 Educator-Led Demo: AWS Global Infrastructure Details 6© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. AWS Regions •An AWS Region is a geographical area. •Data replication across Regions is controlled by you. •Communication between Regions uses AWS backbone network infrastructure. •Each Region provides full redundancy and connectivity to the network. •A Region typically consists of two or more Availability Zones. Example: London Region © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.7 Selecting a Region Determine the right Region for your services, applications, and data based on these factors Data governance, legal requirements Proximity to customers (latency) Services available within the Region Costs (vary by Region) 8© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Availability Zones •Each Region has multiple Availability Zones. •E"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_03.pdf-chunk-2",
+    "document": "AcademyCloudFoundations_Module_03.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 2,
+    "text": "ervices available within the Region Costs (vary by Region) 8© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Availability Zones •Each Region has multiple Availability Zones. •Each Availability Zone is a fully isolated partition of the AWS infrastructure. •There are currently 69 Availability Zones worldwide •Availability Zones consist of discrete data centers •They are designed for fault isolation •They are interconnected with other Availability Zones by using high-speed private networking •You choose your Availability Zones. •AWS recommends replicating data and resources across Availability Zones for resiliency. AWS Cloud Region eu-west-1 Availability Zone eu-west-1a Data center Data center Data center Availability Zone eu-west-1b Availability Zone eu-west-1c © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.9 AWS data centers •AWS data centers are designed for security. •Data centers are where the data resides and data processing occurs. •Each data center has redundant power, networking, and connectivity, and is housed in a separate facility. •A data center typically has 50,000 to 80,000 physical servers. © 2019 Amazon Web Services, In"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_03.pdf-chunk-3",
+    "document": "AcademyCloudFoundations_Module_03.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 3,
+    "text": "Each data center has redundant power, networking, and connectivity, and is housed in a separate facility. •A data center typically has 50,000 to 80,000 physical servers. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.10 Points of Presence •AWS provides a global network of 187 Points of Presence locations •Consists of 176 edge locations and 11 Regional edge caches •Used with Amazon CloudFront •A global Content Delivery Network (CDN), that delivers content to end users with reduced latency •Regional edge caches used for content with infrequent access. 11© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. AWS infrastructure features •Elasticity and scalability •Elastic infrastructure; dynamic adaption of capacity •Scalable infrastructure; adapts to accommodate growth •Fault-tolerance •Continues operating properly in the presence of a failure •Built-in redundancy of components •High availability •High level of operational performance •Minimized downtime •No human intervention AWS Region Availability Zone Data center Data center Data centerData center Data center Data center Data centerData center Data center Data center Data centerData cent"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_03.pdf-chunk-4",
+    "document": "AcademyCloudFoundations_Module_03.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 4,
+    "text": "downtime •No human intervention AWS Region Availability Zone Data center Data center Data centerData center Data center Data center Data centerData center Data center Data center Data centerData center Availability Zone Availability Zone Physically distinct Uninterruptible power supply Backup generators Cooling equipment Network connectivity © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.12 Key takeaways •The AWS Global Infrastructure consists of Regions and Availability Zones. •Your choice of a Region is typically based on compliance requirements or to reduce latency. •Each Availability Zone is physically separate from other Availability Zones and has redundant power, networking, and connectivity. •Edge locations, and Regional edge caches improve performance by caching content closer to users. 13© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Section 2: AWS services and service category overview M o d u l e 3 : A W S G l o b a l I n f r a s t r u c t u r e O v e r v i e w © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. AWS foundational services Infrastructure RegionsEdge locationsAvailability Zones Foundat"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_03.pdf-chunk-5",
+    "document": "AcademyCloudFoundations_Module_03.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 5,
+    "text": "r a s t r u c t u r e O v e r v i e w © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. AWS foundational services Infrastructure RegionsEdge locationsAvailability Zones Foundation Services Compute (virtual, automatic scaling, and load balancing) Networking Applications Virtual desktops Collaboration and sharing Platform Services Caching Relational NoSQL Cluster computing Real-time Data workflows Data warehouse Queuing Orchestration App Streaming Transcoding Email Search Containers DevOps tools Resource templates Usage tracking Monitoring and logs Identity Sync Mobile Analytics Notifications Application services Storage (object, block, and archive) AnalyticsDeployment and management Mobile Services Databases © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.15 AWS categories of services Networking and Content Delivery Mobile Internet of Things Compute Analytics Management and Governance Storage Developer Tools Security, Identity, and Compliance Database Business Applications Machine Learning Blockchain Application Integration AR and VR End User Computing Media Services Migration and Transfer Game Tech Satellite Customer Engagement Cost M"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_03.pdf-chunk-6",
+    "document": "AcademyCloudFoundations_Module_03.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 6,
+    "text": "nce Database Business Applications Machine Learning Blockchain Application Integration AR and VR End User Computing Media Services Migration and Transfer Game Tech Satellite Customer Engagement Cost Management Robotics © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. 16 Storage service category AWS storage services 17© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Amazon Elastic Block Store (Amazon EBS) Amazon Elastic File System (Amazon EFS) Amazon Simple Storage Service (Amazon S3) Amazon Simple Storage Service Glacier Photo from https://www.pexels.com/photo/black-and-grey-device-159282/ Compute service category AWS Compute services Amazon EC2 Amazon EC2 Auto Scaling Amazon Elastic Container Service (Amazon ECS) AWS Elastic Beanstalk AWS Lambda Amazon Elastic Kubernetes Service (Amazon EKS) Photo from https://www.pexels.com/photo/technology-computer-lines-board-50711/ Amazon EC2 Container Registry AWS Fargate 18© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Database service category AWS Database services Amazon Relational Database Service Amazon Aurora Amazon DynamoDB Amazon Redshift Photo from https://aws"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_03.pdf-chunk-7",
+    "document": "AcademyCloudFoundations_Module_03.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 7,
+    "text": "es, Inc. or its Affiliates. All rights reserved. Database service category AWS Database services Amazon Relational Database Service Amazon Aurora Amazon DynamoDB Amazon Redshift Photo from https://aws.amazon.com/compliance/data-center/data-centers/ 19© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Networking and content delivery service category AWS networking and content delivery services Amazon VPC Elastic Load Balancing AWS Direct Connect Amazon CloudFront Amazon Route 53 Photo by Umberto on Unsplash AWS Transit Gateway AWS VPN 20© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Security, identity, and compliance service category AWS security, identity, and compliance services AWS Identity and Access Management (IAM) AWS Organizations Amazon Cognito AWS Artifact AWS Key Management Service AWS Shield Photo byPaweł CzerwińskionUnsplash © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.21 AWS cost management service category AWS cost management services AWS Cost and Usage Report AWS Budgets AWS Cost Explorer Photo by Alexander Mils on Unsplash © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserve"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_03.pdf-chunk-8",
+    "document": "AcademyCloudFoundations_Module_03.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 8,
+    "text": "category AWS cost management services AWS Cost and Usage Report AWS Budgets AWS Cost Explorer Photo by Alexander Mils on Unsplash © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.22 Management and governance service category AWS management and governance services AWS Management Console AWS Config Amazon CloudWatch AWS Auto Scaling AWS Command Line Interface AWS Trusted Advisor AWS Well- Architected Tool AWS CloudTrail Photo by Marta Branco from Pexels © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.23 Activity: AWS Management Console clickthrough Photo by Pixabay from Pexels. 24© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Hands-on activity: AWS Management Console clickthrough 1.Launch the Sandbox hands-on environment and connect to the AWS Management Console. 2.Explore the AWS Management Console. A.Click the Services menu. B.Notice how services are grouped into service categories. For example, the EC2 service appears in the Compute service category. Question #1: Under which service category does the IAM service appear? Question #2: Under which service category does the Amazon VPC service appear? C.Click the"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_03.pdf-chunk-9",
+    "document": "AcademyCloudFoundations_Module_03.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 9,
+    "text": "pears in the Compute service category. Question #1: Under which service category does the IAM service appear? Question #2: Under which service category does the Amazon VPC service appear? C.Click the Amazon VPC service. Notice that the dropdown menu in the top-right corner displays an AWS Region (for example, it might display N. Virginia). D.Click the Region menu and switch to a different Region. For example, choose EU (London). E.Click Subnets (on the left side of the screen). The Region has three subnets in it. Click the box next to one of the subnets. Notice that the bottom half of the screen now displays details about this subnet. Question #3: Does the subnet you selected exist at the level of the Region or at the level of the Availability Zone? F.Click Your VPCs. An existing VPC is already selected. Question #4: Does the VPC exist at the level of the Region or the level of the Availability Zone? Question #5: Which services are global instead of Regional? Check Amazon EC2, IAM, Lambda, and Route 53. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.25 Activity answer key •Question #1: Under which service category does the IAM service appear? •Answer: Secur"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_03.pdf-chunk-10",
+    "document": "AcademyCloudFoundations_Module_03.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 10,
+    "text": "bda, and Route 53. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.25 Activity answer key •Question #1: Under which service category does the IAM service appear? •Answer: Security, Identity, & Compliance. •Question #2: Under which service category does the Amazon VPC service appear? •Answer: Networking & Content Delivery •Question #3: Does the subnet that you selected exist at the level of the Region or the level of the Availability Zone? •Answer: Subnets exist at the level of the Availability Zone. •Question #4: Does the VPC exist at the level of the Region or the level of the Availability Zone? •Answer: VPCs exist at the Region level. •Question #5: Which of the following services are global instead of Regional? Check Amazon EC2, IAM, Lambda, and Route 53. •Answer: IAM and Route 53 are global. Amazon EC2 and Lambda are Regional. 26© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Module wrap-up M o d u l e 3 : A W S G l o b a l I n f r a s t r u c t u r e O v e r v i e w © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Module summary In summary, in this module you learned how to: •Identify the difference betwee"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_03.pdf-chunk-11",
+    "document": "AcademyCloudFoundations_Module_03.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 11,
+    "text": "s t r u c t u r e O v e r v i e w © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Module summary In summary, in this module you learned how to: •Identify the difference between AWS Regions, Availability Zones, and edge locations •Identify AWS service and service categories 28© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Complete the knowledge check © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.29 Sample exam question Which component of AWS global infrastructure does Amazon CloudFront use to ensure low-latency delivery? A.AWS Regions B.AWS edge locations C.AWS Availability Zones D.Amazon Virtual Private Cloud (Amazon VPC) 30© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. 31 •AWS Global Infrastructure •AWS Global Infrastructure Region Table •AWS Cloud Products Additional resources © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. © 2019 Amazon Web Services, Inc. or its affiliates. All rights reserved. This work may not be reproduced or redistributed, in whole or in part, without prior written permission from Amazon Web Services, Inc. Commercial copying, lendi"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_03.pdf-chunk-12",
+    "document": "AcademyCloudFoundations_Module_03.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 12,
+    "text": "or its affiliates. All rights reserved. This work may not be reproduced or redistributed, in whole or in part, without prior written permission from Amazon Web Services, Inc. Commercial copying, lending, or selling is prohibited. Corrections or feedback on the course, please email us at:aws-course-feedback@amazon.com. For all other questions, contact us at: https://aws.amazon.com/contact-us/aws-training/. All trademarks are the property of their owners. Thank you"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-0",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 0,
+    "text": "A W S A c a d e m y C l o u d F o u n d a t i o n s Module 5: Networking and Content Delivery © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. Module overview Topics •Networking basics •Amazon VPC •VPC networking •VPC security •Amazon Route 53 •Amazon CloudFront Activities •Label a network diagram •Design a basic VPC architecture Demo •VPC demonstration Lab •Build your VPC and launch a web server Knowledge check © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.2 Module objectives After completing this module, you should be able to: •Recognize the basics of networking •Describe virtual networking in the cloud with Amazon VPC •Label a network diagram •Design a basic VPC architecture •Indicate the steps to build a VPC •Identify security groups •Create your own VPC and add additional components to it to produce a customized network •Identify the fundamentals of Amazon Route 53 •Recognize the benefits of Amazon CloudFront © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.3 M o d u l e 5 : N e t w o r k i n g a n d C o n t e n t D e l i v e r y Section 1: Networking basics © 2019, Amazon Web Services, Inc. or its Aff"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-1",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 1,
+    "text": "ervices, Inc. or its Affiliates. All rights reserved.3 M o d u l e 5 : N e t w o r k i n g a n d C o n t e n t D e l i v e r y Section 1: Networking basics © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. Networks Subnet 1 Router Subnet 2 © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.5 IP addresses 192 11000000 .0 00000000 .2 00000010 .0 00000000 © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.6 IPv4 and IPv6 addresses IPv4 (32-bit) address: 192.0.2.0 IPv6 (128-bit) address: 2600:1f18:22ba:8c00:ba86:a05e:a5ba:00FF © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.7 Classless Inter-Domain Routing (CIDR) Network identifier (routing prefix) 192 11000000 Fixed . 0 00000000 Fixed .2 00000010 Fixed . Host identifier 0 00000000 to 11111111 Flexible /24 Tells you how many bits are fixed © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.8 Open Systems Interconnection (OSI) model LayerNumberFunctionProtocol/Address Application7Means for an application to access a computer network HTTP(S), FTP, DHCP, LDAP Presentation6 •Ensures that the application layer can read the data"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-2",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 2,
+    "text": "model LayerNumberFunctionProtocol/Address Application7Means for an application to access a computer network HTTP(S), FTP, DHCP, LDAP Presentation6 •Ensures that the application layer can read the data •Encryption ASCI, ICA Session5Enables orderly exchange of dataNetBIOS, RPC Transport4Provides protocols to support host-to-host communicationTCP, UDP Network3Routing and packet forwarding (routers)IP Data link2Transfer data in the same LAN network (hubs and switches)MAC Physical1Transmission and reception of raw bitstreams over a physical mediumSignals (1s and 0s) © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.9 M o d u l e 5 : N e t w o r k i n g a n d C o n t e n t D e l i v e r y Section 2: Amazon VPC © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. Amazon VPC Amazon VPC •Enables you to provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define •Gives you control over your virtual networking resources, including: •Selection of IP address range •Creation of subnets •Configuration of route tables and network gateways •Enables you to customize the network configurati"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-3",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 3,
+    "text": "your virtual networking resources, including: •Selection of IP address range •Creation of subnets •Configuration of route tables and network gateways •Enables you to customize the network configuration for your VPC •Enables you to use multiple layers of security © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.11 VPCs and subnets •VPCs: •Logically isolated from other VPCs •Dedicated to your AWS account •Belong to a single AWS Region and can span multiple Availability Zones •Subnets: •Range of IP addresses that divide a VPC •Belong to a single Availability Zone •Classified as public or private AWS Cloud Region Availability Zone 1Availability Zone 2 VPC SubnetSubnet © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.12 IP addressing •When you create a VPC, you assign it to an IPv4 CIDR block (range of private IPv4 addresses). •You cannot change the address range after you create the VPC. •The largest IPv4 CIDR block size is /16. •The smallest IPv4 CIDR block size is /28. •IPv6 is also supported (with a different block size limit). •CIDR blocks of subnets cannot overlap. x.x.x.x/16 or 65,536 addresses (max) to x.x.x.x/28 or 16 addresses ("
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-4",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 4,
+    "text": "t IPv4 CIDR block size is /28. •IPv6 is also supported (with a different block size limit). •CIDR blocks of subnets cannot overlap. x.x.x.x/16 or 65,536 addresses (max) to x.x.x.x/28 or 16 addresses (min) VPC © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.13 Reserved IP addresses Example: A VPC with an IPv4 CIDR block of 10.0.0.0/16 has 65,536 total IP addresses. The VPC has four equal-sized subnets. Only 251 IP addresses are available for use by each subnet. Subnet 1 (10.0.0.0/24) Subnet 4 (10.0.1.0/24) Subnet 2 (10.0.2.0/24) Subnet 3 (10.0.3.0/24) VPC: 10.0.0.0/16 251 IP addresses 251 IP addresses 251 IP addresses 251 IP addresses IP Addresses for CIDR block 10.0.0.0/24 Reserved for 10.0.0.0Network address 10.0.0.1Internal communication 10.0.0.2 Domain Name System (DNS) resolution 10.0.0.3Future use 10.0.0.255 Network broadcast address © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.14 Public IP address types Public IPv4 address •Manually assigned through an Elastic IP address •Automatically assigned through the auto-assign public IP address settings at the subnet level Elastic IP address •Associated with an AWS account •Can be a"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-5",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 5,
+    "text": "ually assigned through an Elastic IP address •Automatically assigned through the auto-assign public IP address settings at the subnet level Elastic IP address •Associated with an AWS account •Can be allocated and remapped anytime •Additional costs might apply © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.15 Elastic network interface •An elastic network interface is a virtual network interface that you can: •Attach to an instance. •Detach from the instance, and attach to another instance to redirect network traffic. •Its attributes follow when it is reattached to a new instance. •Each instance in your VPC has a default network interface that is assigned a private IPv4 address from the IPv4 address range of your VPC. Subnet: 10.0.1.0/24 Elastic network interface © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.16 Route tables and routes •A route table contains a set of rules (or routes) that you can configure to direct network traffic from your subnet. •Each route specifies a destination and a target. •By default, every route table contains a local route for communication within the VPC. •Each subnet must be associated with a route t"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-6",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 6,
+    "text": "om your subnet. •Each route specifies a destination and a target. •By default, every route table contains a local route for communication within the VPC. •Each subnet must be associated with a route table (at most one). Main (Default) Route Table DestinationTarget 10.0.0.0/16local VPC CIDR block © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.17 Section 2 key takeaways •A VPC is a logically isolated section of the AWS Cloud. •A VPC belongs to one Region and requires a CIDR block. •A VPC is subdivided into subnets. •A subnet belongs to one Availability Zone and requires a CIDR block. •Route tables control traffic for a subnet. •Route tables have a built-in local route. •You add additional routes to the table. •The local route cannot be deleted. 18© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. M o d u l e 5 : N e t w o r k i n g a n d C o n t e n t D e l i v e r y Section 3: VPC networking © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. Internet gateway Availability Zone Public subnet:10.0.1.0/24 Route table Private subnet: 10.0.2.0/24 Internet AWS Cloud Region VPC: 10.0.0.0/16 Internet gateway (igw-id) Pub"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-7",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 7,
+    "text": "ates. All rights reserved. Internet gateway Availability Zone Public subnet:10.0.1.0/24 Route table Private subnet: 10.0.2.0/24 Internet AWS Cloud Region VPC: 10.0.0.0/16 Internet gateway (igw-id) Public Subnet Route Table DestinationTarget 10.0.0.0/16local 0.0.0.0/0igw-id © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.20 Network address translation (NAT) gateway Availability Zone Public subnet:10.0.1.0/24 Private subnet: 10.0.2.0/24 Internet AWS Cloud Region VPC: 10.0.0.0/16 NAT gateway (nat-gw-id) Internet gateway (igw-id) Public route table Private route table Public Subnet Route Table DestinationTarget 10.0.0.0/16local 0.0.0.0/0igw-id Private Subnet Route Table DestinationTarget 10.0.0.0/16local 0.0.0.0/0nat-gw-id © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.21 VPC sharing VPC: Account A (owner) Private subnet AWS Cloud Public subnet Region Account B (participant)Account C (participant) Account D (participant) EC2 instance EC2 instance EC2 instance RDS instance EC2 instance Amazon Redshift NAT gateway Internet gateway Router © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.22 VPC peering AWS Cloud VPC"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-8",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 8,
+    "text": "nstance EC2 instance RDS instance EC2 instance Amazon Redshift NAT gateway Internet gateway Router © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.22 VPC peering AWS Cloud VPC A: 10.0.0.0/16VPC B: 10.3.0.0/16 Peering connection (pcx-id) Route Table for VPC A DestinationTarget 10.0.0.0/16local 10.3.0.0/16pcx-id Route Table for VPC B DestinationTarget 10.3.0.0/16local 10.0.0.0/16pcx-id You can connect VPCs in your own AWS account, between AWS accounts, or between AWS Regions. Restrictions: •IP spaces cannot overlap. •Transitive peering is not supported. •You can only have one peering resource between the same two VPCs. © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.23 AWS Site-to-Site VPN Internet Site-to-Site VPN connection Customer gateway Corporate data center: 192.168.10.0/24 Availability Zone Public subnet:10.1.0.0/24 Private subnet: 10.0.2.0/24 AWS Cloud Region VPC: 10.0.0.0/16 Virtual gateway (vgw-id) Route table Public subnet route table DestinationTarget 10.0.0.0/16local 0.0.0.0/0igw-id Private subnet route table DestinationTarget 10.0.0.0/16local 192.168.10.0/24vgw-id © 2019, Amazon Web Services, Inc. or its Affiliates. All"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-9",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 9,
+    "text": "te table DestinationTarget 10.0.0.0/16local 0.0.0.0/0igw-id Private subnet route table DestinationTarget 10.0.0.0/16local 192.168.10.0/24vgw-id © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.24 AWS Direct Connect Availability Zone Public subnet:10.1.0.0/24 Private subnet: 10.0.2.0/24 Internet AWS Cloud Region VPC: 10.0.0.0/16 Customer gateway Corporate data center: 192.168.10.0/24 Virtual gateway AWS Direct Connect 802.1q VLAN Route table © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.25 VPC endpoints Availability Zone Public subnet:10.0.1.0/24 Private subnet: 10.0.2.0/24 Amazon Simple Storage Service (Amazon S3) AWS Cloud Region VPC: 10.0.0.0/16 VPC endpoint (vpcep-id) Public Subnet Route Table DestinationTarget 10.0.0.0/16local Amazon S3 IDvpcep-id Two types of endpoints: •Interface endpoints (powered by AWS PrivateLink) •Gateway endpoints (Amazon S3 and Amazon DynamoDB) © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.26 AWS Transit Gateway From this... VPN connection VPN connection VPN connection Amazon VPC Amazon VPC VPC peering VPC peering VPC peering VPC peering Amazon VPC Amazon VPC VPC peering AWS"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-10",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 10,
+    "text": "s reserved.26 AWS Transit Gateway From this... VPN connection VPN connection VPN connection Amazon VPC Amazon VPC VPC peering VPC peering VPC peering VPC peering Amazon VPC Amazon VPC VPC peering AWS Direct Connect gateway Customer gateway To this... Amazon VPC Amazon VPC Amazon VPC Amazon VPC AWS Direct Connect gateway VPN connection AWS Transit Gateway © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.27 Activity: Label this network diagram AWS Cloud Private subnet: 10.0.2.0/24 10.0.0.0/16 Public subnet:10.0.1.0/24 Q6 ? _?_ IP address ? ? ? ? ? ? ? Internet _?_ IP address DestinationTarget ?local 0.0.0.0/0? ? ? © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.28 Activity: Solution Private subnet: 10.0.2.0/24 AWS Cloud 10.0.0.0/16 Public subnet:10.0.1.0/24 NAT gateway Elastic network interface Private IP address Region VPC Internet gateway Private subnet Route table Public subnet Internet Availability Zone Private IP address DestinationTarget 10.0.0.0/16local 0.0.0.0/0igw-id Route table Route © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.29 Recorded Amazon VPC demonstration © 2019, Amazon Web Services, Inc."
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-11",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 11,
+    "text": "rget 10.0.0.0/16local 0.0.0.0/0igw-id Route table Route © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.29 Recorded Amazon VPC demonstration © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.30 Section 3 key takeaways •There are several VPC networking options, which include: •Internet gateway •NAT gateway •VPC endpoint •VPC peering •VPC sharing •AWS Site-to-Site VPN •AWS Direct Connect •AWS Transit Gateway •You can use the VPC Wizard to implement your design. 31© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. M o d u l e 5 : N e t w o r k i n g a n d C o n t e n t D e l i v e r y Section 4: VPC security © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. Security groups Availability Zone Public subnet:10.0.1.0/24 Private subnet: 10.0.2.0/24 AWS Cloud Region VPC: 10.0.0.0/16 Security group Security group Security groups act at the instance level. © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.33 Security groups •Security groups have rules that control inbound and outbound instance traffic. •Default security groups deny all inbound traffic and allow all outbound tr"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-12",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 12,
+    "text": "ates. All rights reserved.33 Security groups •Security groups have rules that control inbound and outbound instance traffic. •Default security groups deny all inbound traffic and allow all outbound traffic. •Security groups are stateful. © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.34 Custom security groups •You can specify allow rules, but not deny rules. •All rules are evaluated before the decision to allow traffic. © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.35 Network access control lists (network ACLs) AWS Cloud Region VPC: 10.0.0.0/16 Availability Zone Public subnet:10.0.0.0/24 Private subnet: 10.0.4.0/22 Network ACLs act at the subnet level. © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.36 Network ACLs •A network ACL has separate inbound and outbound rules, and each rule can either allow or deny traffic. •Default network ACLs allow all inbound and outbound IPv4 traffic. •Network ACLs are stateless. © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.37 Custom network ACLs •Custom network ACLs deny all inbound and outbound traffic until you add rules. •You can specify both"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-13",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 13,
+    "text": "s. © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.37 Custom network ACLs •Custom network ACLs deny all inbound and outbound traffic until you add rules. •You can specify both allow and deny rules. •Rules are evaluated in number order, starting with the lowest number. © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.38 Security groups versus network ACLs AttributeSecurity GroupsNetwork ACLs ScopeInstance levelSubnet level Supported RulesAllow rules onlyAllow and deny rules State Stateful (return traffic is automatically allowed, regardless of rules) Stateless (return traffic must be explicitly allowed by rules) Order of Rules All rules are evaluated before decision to allow traffic Rules are evaluated in number order before decision to allow traffic © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.39 Activity: Design a VPC Scenario: You have a small business with a website that is hosted on an Amazon Elastic Compute Cloud (Amazon EC2) instance. You have customer data that is stored on a backend database that you want to keep private. You want to use Amazon VPC to set up a VPC that meets the following requireme"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-14",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 14,
+    "text": "te Cloud (Amazon EC2) instance. You have customer data that is stored on a backend database that you want to keep private. You want to use Amazon VPC to set up a VPC that meets the following requirements: •Your web server and database server must be in separate subnets. •The first address of your network must be 10.0.0.0. Each subnet must have 256 total IPv4 addresses. •Your customers must always be able to access your web server. •Your database server must be able to access the internet to make patch updates. •Your architecture must be highly available and use at least one custom firewall layer. © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.40 Section 4 key takeaways •Build security into your VPC architecture: •Isolate subnets if possible. •Choose the appropriate gateway device or VPN connection for your needs. •Use firewalls. •Security groups and network ACLs are firewall options that you can use to secure your VPC. 41© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. Lab 2: Build Your VPC and Launch a Web Server © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.42 Lab 2: Scenario In this lab, you use Amazon"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-15",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 15,
+    "text": "s Affiliates. All rights reserved. Lab 2: Build Your VPC and Launch a Web Server © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.42 Lab 2: Scenario In this lab, you use Amazon VPC to create your own VPC and add some components to produce a customized network. You create a security group for your VPC. You also create an EC2 instance and configure it to run a web server and to use the security group. You then launch the EC2 instance into the VPC. Amazon VPC Amazon EC2 © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.43 Lab 2: Tasks •Create a VPC. •Create additional subnets. •Create a VPC security group. •Launch a web server instance. Security group © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.44 Lab 2: Final product Availability Zone A Public subnet 1: 10.0.0.0/24 Private subnet 1: 10.0.1.0/24 AWS Cloud Region VPC: 10.0.0.0/16 Internet gateway Availability Zone B Public subnet 2: 10.0.2.0/24 Private subnet 2: 10.0.3.0/24 Security group NAT gateway Web server Public Route Table DestinationTarget 10.0.0.0/16Local 0.0.0.0/0Internet gateway Private Route Table DestinationTarget 10.0.0.0/16Local 0.0.0.0/0NAT gate"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-16",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 16,
+    "text": ".0.3.0/24 Security group NAT gateway Web server Public Route Table DestinationTarget 10.0.0.0/16Local 0.0.0.0/0Internet gateway Private Route Table DestinationTarget 10.0.0.0/16Local 0.0.0.0/0NAT gateway © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.45 Build Your VPC and Launch a Web Server Begin Lab 2: Build Your VPC and Launch a Web Server ~ 30 minutes © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.46 Lab debrief: Key takeaways © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.47 Section 5: Amazon Route 53 M o d u l e 5 : N e t w o r k i n g a n d C o n t e n t D e l i v e r y © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. Amazon Route 53 Amazon Route 53 •Is a highly available and scalable Domain Name System (DNS) web service •Is used to route end users to internet applications by translating names (like www.example.com) into numeric IP addresses (like 192.0.2.1) that computers use to connect to each other •Is fully compliant with IPv4 and IPv6 •Connects user requests to infrastructure running in AWS and also outside of AWS •Is used to check the health of your resources •Feature"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-17",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 17,
+    "text": "to connect to each other •Is fully compliant with IPv4 and IPv6 •Connects user requests to infrastructure running in AWS and also outside of AWS •Is used to check the health of your resources •Features traffic flow •Enables you to register domain names © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.49 Amazon Route 53 DNS resolution UserDNS resolverAmazon Route 53 Requests www.example.com Checks with Route 53 for IP address Returns IP address 192.0.2.0 Returns IP address 192.0.2.0 © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.50 Amazon Route 53 supported routing •Simple routing – Use in single-server environments •Weighted round robin routing – Assign weights to resource record sets to specify the frequency •Latency routing – Help improve your global applications •Geolocation routing – Route traffic based on location of your users •Geoproximity routing – Route traffic based on location of your resources •Failover routing – Fail over to a backup site if your primary site becomes unreachable •Multivalue answer routing – Respond to DNS queries with up to eight healthy records selected at random © 2019, Amazon Web Services, Inc. or it"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-18",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 18,
+    "text": "o a backup site if your primary site becomes unreachable •Multivalue answer routing – Respond to DNS queries with up to eight healthy records selected at random © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.51 Use case: Multi-region deployment User some-elb-name.ap-southeast-2.elb.amazonaws.com some-elb-name.us-west-2.elb.amazonaws.com Amazon Route 53 NameTypeValue example.comALIASsome-elb-name.us-west-2.elb.amazonaws.com example.comALIASsome-elb-name.ap-southeast-2.elb.amazonaws.com © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.52 Amazon Route 53 DNS failover Improve the availability of your applications that run on AWS by: •Configuring backup and failover scenarios for your own applications •Enabling highly available multi-region architectures on AWS •Creating health checks © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.53 DNS failover for a multi-tiered web application Secondary Availability Zone BAvailability Zone A Amazon Relational Database Service (Amazon RDS) instance Amazon Relational Database Service (Amazon RDS) instance User Amazon S3 static website Primary Amazon EC2 AWS Cloud Auto Scaling"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-19",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 19,
+    "text": "bility Zone A Amazon Relational Database Service (Amazon RDS) instance Amazon Relational Database Service (Amazon RDS) instance User Amazon S3 static website Primary Amazon EC2 AWS Cloud Auto Scaling group Amazon EC2 Amazon Route 53 © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.54 Section 5 key takeaways •Amazon Route 53 is a highly available and scalable cloud DNS web service that translates domain names into numeric IP addresses. •Amazon Route 53 supports several types of routing policies. •Multi-Region deployment improves your application’s performance for a global audience. •You can use Amazon Route 53 failover to improve the availability of your applications. 55© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. M o d u l e 5 : N e t w o r k i n g a n d C o n t e n t D e l i v e r y Section 6: Amazon CloudFront © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. Content delivery and network latency User Origin server Router Router Router Router Hop Hop Hop Hop Hop Hop Hop Client © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.9 Content delivery network (CDN) •Is a globally distribut"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-20",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 20,
+    "text": "server Router Router Router Router Hop Hop Hop Hop Hop Hop Hop Client © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.9 Content delivery network (CDN) •Is a globally distributed system of caching servers •Caches copies of commonly requested files (static content) •Delivers a local copy of the requested content from a nearby cache edge or Point of Presence •Accelerates delivery of dynamic content •Improves application performance and scaling © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.10 Amazon CloudFront Amazon CloudFront •Fast, global, and secure CDN service •Global network of edge locations and Regional edge caches •Self-service model •Pay-as-you-go pricing © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.59 Amazon CloudFront infrastructure Edge locations Multiple edge locations Regional edge caches •Edge locations – Network of data centers that CloudFront uses to serve popular content quickly to customers. •Regional edge cache – CloudFront location that caches content that is not popular enough to stay at an edge location. It is located between the origin server and the global edge location. © 2019, Am"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-21",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 21,
+    "text": "•Regional edge cache – CloudFront location that caches content that is not popular enough to stay at an edge location. It is located between the origin server and the global edge location. © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.60 Amazon CloudFront benefits •Fast and global •Security at the edge •Highly programmable •Deeply integrated with AWS •Cost-effective © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.61 Amazon CloudFront pricing Data transfer out •Charged for the volume of data transferred out from Amazon CloudFront edge location to the internet or to your origin. HTTP(S) requests •Charged for number of HTTP(S) requests. Invalidation requests •No additional charge for the first 1,000 paths that are requested for invalidation each month. Thereafter, $0.005 per path that is requested for invalidation. Dedicated IP custom SSL •$600 per month for each custom SSL certificate that is associated with one or more CloudFront distributions that use the Dedicated IP version of custom SSL certificate support. © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.62 Section 6 key takeaways •A CDN is a globally"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-22",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 22,
+    "text": "ributions that use the Dedicated IP version of custom SSL certificate support. © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.62 Section 6 key takeaways •A CDN is a globally distributed system of caching servers that accelerates delivery of content. •Amazon CloudFront is a fast CDN service that securely delivers data, videos, applications, and APIs over a global infrastructure with low latency and high transfer speeds. •Amazon CloudFront offers many benefits. 63© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. M o d u l e 5 : N e t w o r k i n g a n d C o n t e n t D e l i v e r y Module wrap-up © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. Module summary In summary, in this module you learned how to: •Recognize the basics of networking •Describe virtual networking in the cloud with Amazon VPC •Label a network diagram •Design a basic VPC architecture •Indicate the steps to build a VPC •Identify security groups •Create your own VPC and added additional components to it to produce a customized network •Identify the fundamentals of Amazon Route 53 •Recognize the benefits of Amazon CloudFront © 2019, Amazon W"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-23",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 23,
+    "text": "s •Create your own VPC and added additional components to it to produce a customized network •Identify the fundamentals of Amazon Route 53 •Recognize the benefits of Amazon CloudFront © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.65 Complete the knowledge check © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.66 Sample exam question Which AWS networking service enables a company to create a virtual network within AWS? A.AWS Config B.Amazon Route 53 C.AWS Direct Connect D.Amazon VPC © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.67 Additional resources •Amazon VPC overview page •Amazon Virtual Private Cloud Connectivity Options whitepaper •One to Many: Evolving VPC Design AWS Architecture blog post •Amazon VPC User Guide •Amazon CloudFront overview page © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.68 © 2019 Amazon Web Services, Inc. or its affiliates. All rights reserved. This work may not be reproduced or redistributed, in whole or in part, without prior written permission from Amazon Web Services, Inc. Commercial copying, lending, or selling is prohibited. Corrections or feedba"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_05.pdf-chunk-24",
+    "document": "AcademyCloudFoundations_Module_05.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 24,
+    "text": "ay not be reproduced or redistributed, in whole or in part, without prior written permission from Amazon Web Services, Inc. Commercial copying, lending, or selling is prohibited. Corrections or feedback on the course, please email us at:aws-course-feedback@amazon.com. For all other questions, contact us at: https://aws.amazon.com/contact-us/aws-training/. All trademarks are the property of their owners. Thank you"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-0",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 0,
+    "text": "Module 6: Compute A W S A c a d e m y C l o u d F o u n d a t i o n s © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved. Module overview Topics •Compute services overview •Amazon EC2 •Amazon EC2 cost optimization •Container services •Introduction to AWS Lambda •Introduction to AWS Elastic Beanstalk Activities •Amazon EC2 versus Managed Service •Hands-on with AWS Lambda •Hands-on with AWS Elastic Beanstalk Demo •Recorded demonstration of Amazon EC2 Lab •Introduction to Amazon EC2 Knowledge check © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.2 Module objectives 3© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. After completing this module, you should be able to: •Provide an overview of different AWS compute services in the cloud •Demonstrate why to use Amazon Elastic Compute Cloud (Amazon EC2) •Identify the functionality in the EC2 console •Perform basic functions in Amazon EC2 to build a virtual computing environment •Identify Amazon EC2 cost optimization elements •Demonstrate when to use AWS Elastic Beanstalk •Demonstrate when to use AWS Lambda •Identify how to run containerized applications in a cluster of ma"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-1",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 1,
+    "text": "nt •Identify Amazon EC2 cost optimization elements •Demonstrate when to use AWS Elastic Beanstalk •Demonstrate when to use AWS Lambda •Identify how to run containerized applications in a cluster of managed servers Section 1: Compute services overview M o d u l e 6 : C o m p u t e © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. AWS compute services © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Amazon Web Services (AWS) offers many compute services. This module will discuss the highlighted services. Amazon EC2 Amazon EC2 Auto Scaling Amazon Elastic Container Registry (Amazon ECR) Amazon Elastic Container Service (Amazon ECS) AWS Elastic Beanstalk AWS Lambda Amazon Lightsail Amazon Elastic Kubernetes Service (Amazon EKS) AWS FargateAWS Outposts AWS Batch AWS Serverless Application Repository VMware Cloud on AWS 5 Categorizing compute services 6© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. ServicesKey ConceptsCharacteristicsEase of Use •Amazon EC2•Infrastructure as a service (IaaS) •Instance-based •Virtual machines •Provision virtual machines that you can manage as you choose A familiar concept to many IT pr"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-2",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 2,
+    "text": "aracteristicsEase of Use •Amazon EC2•Infrastructure as a service (IaaS) •Instance-based •Virtual machines •Provision virtual machines that you can manage as you choose A familiar concept to many IT professionals. •AWS Lambda•Serverless computing •Function-based •Low-cost •Write and deploy code that executes on a schedule or that can be triggered by events •Use when possible (architect for the cloud) A relatively new concept for many IT staff members, but easy to use after you learn how. •Amazon ECS •Amazon EKS •AWS Fargate •Amazon ECR •Container-based computing •Instance-based •Spin up and execute jobs more quickly AWS Fargate reduces administrative overhead, but you can use options that give you more control. •AWS Elastic Beanstalk •Platform as a service (PaaS) •For web applications •Focus on your code (building your application) •Can easily tie into other services— databases, Domain Name System (DNS), etc. Fast and easy to get started. Choosing the optimal compute service •The optimal compute service or services that you use will depend on your use case •Some aspects to consider – •What is your application design? •What are your usage patterns? •Which configuration settings will"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-3",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 3,
+    "text": "l compute service or services that you use will depend on your use case •Some aspects to consider – •What is your application design? •What are your usage patterns? •Which configuration settings will you want to manage? •Selecting the wrong compute solution for an architecture can lead to lower performance efficiency •A good starting place—Understand the available compute options 7© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Section 2: Amazon EC2 M o d u l e 6 : C o m p u t e © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Amazon Elastic Compute Cloud (Amazon EC2) ✓Application server ✓Web server ✓Database server ✓Game server ✓Mail server ✓Media server ✓Catalog server ✓File server ✓Computing server ✓Proxy server On-premises servers © 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.9 Amazon EC2 instances Example uses of Amazon EC2 instances Photo byTaylor VickonUnsplash Photo by panumas nikhomkhai from Pexels Amazon EC2 overview •Amazon Elastic Compute Cloud (Amazon EC2) •Provides virtual machines—referred to as EC2 instances—in the cloud. •Gives you full control over the guest operating system (Windows or Li"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-4",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 4,
+    "text": "zon EC2 overview •Amazon Elastic Compute Cloud (Amazon EC2) •Provides virtual machines—referred to as EC2 instances—in the cloud. •Gives you full control over the guest operating system (Windows or Linux) on each instance. •You can launch instances of any size into an Availability Zone anywhere in the world. •Launch instances from Amazon Machine Images (AMIs). •Launch instances with a few clicks or a line of code, and they are ready in minutes. •You can control traffic to and from instances. 10© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Amazon EC2 Launching an Amazon EC2 instance 11© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. This section of the module walks through nine key decisions to make when you create an EC2 instance by using the AWS Management Console Launch Instance Wizard. ➢Along the way, essential Amazon EC2 concepts will be explored. 1. Select an AMI 12 •Amazon Machine Image (AMI) •Is a template that is used to create an EC2 instance (which is a virtual machine, or VM, that runs in the AWS Cloud) •Contains a Windows or Linux operating system •Often also has some software pre-installed •AMI choices: •Quick Start –"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-5",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 5,
+    "text": "an EC2 instance (which is a virtual machine, or VM, that runs in the AWS Cloud) •Contains a Windows or Linux operating system •Often also has some software pre-installed •AMI choices: •Quick Start – Linux and Windows AMIs that are provided by AWS •My AMIs – Any AMIs that you created •AWS Marketplace – Pre-configured templates from third parties •Community AMIs – AMIs shared by others; use at your own risk © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Choices made using the Launch Instance Wizard: 1.AMI 2.Instance Type 3.Network settings 4.IAM role 5.User data 6.Storage options 7.Tags 8.Security group 9.Key pair AMI Instance Launch instance Creating a new AMI: Example 13© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. (Optional) Import a virtual machine Quick Start or other existing AMI AWS Cloud MyAMI Launch an instance Starter AMI Connect to the instance and manually modify it or run a script that modifies the instance (for example, upgrade installed software) Unmodified Instance Modified Instance New AMI Capture as a new AMI Region A Region B New AMI Copy the AMI to any other Regions where you want to use it 123 4 AMI details 2."
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-6",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 6,
+    "text": "upgrade installed software) Unmodified Instance Modified Instance New AMI Capture as a new AMI Region A Region B New AMI Copy the AMI to any other Regions where you want to use it 123 4 AMI details 2. Select an instance type 14 •Consider your use case •How will the EC2 instance you create be used? •The instance type that you choose determines – •Memory (RAM) •Processing power (CPU) •Disk space and disk type (Storage) •Network performance •Instance type categories – •General purpose •Compute optimized •Memory optimized •Storage optimized •Accelerated computing •Instance types offer family, generation, and size © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Choices made using the Launch Instance Wizard: 1.AMI 2.Instance Type 3.Network settings 4.IAM role 5.User data 6.Storage options 7.Tags 8.Security group 9.Key pair EC2 instance type naming and sizes Instance type naming •Example: t3.large •T is the family name •3 is the generation number •Large is the size Instance type details Instance Name vCPUMemory (GB)Storage t3.nano20.5EBS-Only t3.micro21EBS-Only t3.small22EBS-Only t3.medium24EBS-Only t3.large28EBS-Only t3.xlarge416EBS-Only t3.2xlarge832EBS-Only Exa"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-7",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 7,
+    "text": "stance type details Instance Name vCPUMemory (GB)Storage t3.nano20.5EBS-Only t3.micro21EBS-Only t3.small22EBS-Only t3.medium24EBS-Only t3.large28EBS-Only t3.xlarge416EBS-Only t3.2xlarge832EBS-Only Example instance sizes © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.15 Select instance type: Based on use case General Purpose Compute Optimized Memory Optimized Accelerated Computing Storage Optimized Instance Types a1, m4, m5, t2, t3 c4, c5 r4, r5, x1, z1 f1, g3, g4, p2, p3 d2, h1, i3 Use CaseBroad High performance In-memory databases Machine learning Distributed file systems © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.16 Instance type details Instance types: Networking features •The network bandwidth (Gbps) varies by instance type. •See Amazon EC2 Instance Types to compare. •To maximize networking and bandwidth performance of your instance type: •If you have interdependent instances, launch them into a cluster placement group. •Enable enhanced networking. •Enhanced networking types are supported on most instance types. •See the Networking and Storage Features documentation for details. •Enhanced networking types – •Elastic Network"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-8",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 8,
+    "text": "enhanced networking. •Enhanced networking types are supported on most instance types. •See the Networking and Storage Features documentation for details. •Enhanced networking types – •Elastic Network Adapter (ENA): Supports network speeds of up to 100 Gbps. •Intel 82599 Virtual Function interface: Supports network speeds of up to 10 Gbps. 17© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. 3. Specify network settings 18 •Where should the instance be deployed? •Identify the VPC and optionally the subnet •Should a public IP address be automatically assigned? •To make it internet-accessible © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. VPC AWS Cloud Availability Zone 1Availability Zone 2 Instance Public subnet Private subnet Region Example: specify to deploy the instance here Choices made by using the Launch Instance Wizard: 1.AMI 2.Instance Type 3.Network settings 4.IAM role 5.User data 6.Storage options 7.Tags 8.Security group 9.Key pair 4. Attach IAM role (optional) 19 •Will software on the EC2 instance need to interact with other AWS services? •If yes, attach an appropriate IAM Role. •An AWS Identity and Access Management (IAM) rol"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-9",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 9,
+    "text": "4. Attach IAM role (optional) 19 •Will software on the EC2 instance need to interact with other AWS services? •If yes, attach an appropriate IAM Role. •An AWS Identity and Access Management (IAM) role that is attached to an EC2 instance is kept in an instance profile. •You are not restricted to attaching a role only at instance launch. •You can also attach a role to an instance that already exists. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Instance Role that grants Amazon Simple Storage Service (Amazon S3) bucket access permissions attached to S3 bucket with objects Application on instance can access Example: Choices made by using the Launch Instance Wizard: 1.AMI 2.Instance Type 3.Network settings 4.IAM role 5.User data 6.Storage options 7.Tags 8.Security group 9.Key pair 5. User data script (optional) 20 •Optionally specify a user data script at instance launch •Use user data scripts to customize the runtime environment of your instance •Script executes the first time the instance starts •Can be used strategically •For example, reduce the number of custom AMIs that you build and maintain © 2019 Amazon Web Services, Inc. or its Affiliates. All right"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-10",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 10,
+    "text": "s the first time the instance starts •Can be used strategically •For example, reduce the number of custom AMIs that you build and maintain © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. AMI Running EC2 instance User data #!/bin/bash yum update –y yum install -y wget Choices made by using the Launch Instance Wizard: 1.AMI 2.Instance Type 3.Network settings 4.IAM role 5.User data 6.Storage options 7.Tags 8.Security group 9.Key pair 6. Specify storage 21 •Configure the root volume • Where the guest operating system is installed •Attach additional storage volumes (optional) •AMI might already include more than one volume •For each volume, specify: •The size of the disk (in GB) •The volume type •Different types of solid state drives (SSDs) and hard disk drives (HDDs) are available •If the volume will be deleted when the instance is terminated •If encryption should be used © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Choices made by using the Launch Instance Wizard: 1.AMI 2.Instance Type 3.Network settings 4.IAM role 5.User data 6.Storage options 7.Tags 8.Security group 9.Key pair Amazon EC2 storage options •Amazon Elastic Block Store"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-11",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 11,
+    "text": "the Launch Instance Wizard: 1.AMI 2.Instance Type 3.Network settings 4.IAM role 5.User data 6.Storage options 7.Tags 8.Security group 9.Key pair Amazon EC2 storage options •Amazon Elastic Block Store (Amazon EBS) – •Durable, block-level storage volumes. •You can stop the instance and start it again, and the data will still be there. •Amazon EC2 Instance Store – •Storage is provided on disks that are attached to the host computer where the EC2 instance is running. •If the instance stops, data stored here is deleted. •Other options for storage (not for the root volume) – •Mount an Amazon Elastic File System (Amazon EFS) file system. •Connect to Amazon Simple Storage Service (Amazon S3). 22© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Example storage options •Instance 1 characteristics – •It has an Amazon EBS root volume type for the operating system. •What will happen if the instance is stopped and then started again? •Instance 2 characteristics – •It has an Instance Store root volume type for the operating system. •What will happen if the instance stops (because of user error or a system malfunction)? 23© 2019 Amazon Web Services, Inc. or its Affiliates."
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-12",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 12,
+    "text": "nstance Store root volume type for the operating system. •What will happen if the instance stops (because of user error or a system malfunction)? 23© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Instance 1 Host computer Ephemeral volume 2 Ephemeral volume 1 Instance 2 Amazon Elastic Block Store (Amazon EBS) 20-GB volume Attached as Root volume 500-GB volume Attached as Storage volume Attached as Root volume Instance Store Attached as Storage volume 7. Add tags 24 •A tag is a label that you can assign to an AWS resource. •Consists of akeyand an optionalvalue. •Tagging is how you can attach metadata to an EC2 instance. •Potential benefits of tagging—Filtering, automation, cost allocation, and access control. Example: © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Choices made by using the Launch Instance Wizard: 1.AMI 2.Instance Type 3.Network settings 4.IAM role 5.User data 6.Storage options 7.Tags 8.Security group 9.Key pair 8. Security group settings 25 •A security group is a set of firewall rules that control traffic to the instance. •It exists outside of the instance's guest OS. •Create rules that specify the source and which p"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-13",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 13,
+    "text": "ty group settings 25 •A security group is a set of firewall rules that control traffic to the instance. •It exists outside of the instance's guest OS. •Create rules that specify the source and which ports that network communications can use. •Specify the port number and the protocol, such as Transmission Control Protocol (TCP), User Datagram Protocol (UDP), or Internet Control Message Protocol (ICMP). •Specify the source (for example, an IP address or another security group) that is allowed to use the rule. Example rule: © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Choices made by using the Launch Instance Wizard: 1.AMI 2.Instance Type 3.Network settings 4.IAM role 5.User data 6.Storage options 7.Tags 8.Security group 9.Key pair 9. Identify or create the key pair 26 •At instance launch, you specify an existing key pair or create a new key pair. •A key pair consists of – •A public key that AWS stores. •A private key file that you store. •It enables secure connections to the instance. •For Windows AMIs – •Use the private key to obtain the administrator password that you need to log in to your instance. •For Linux AMIs – •Use the private key to use SSH to s"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-14",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 14,
+    "text": "nections to the instance. •For Windows AMIs – •Use the private key to obtain the administrator password that you need to log in to your instance. •For Linux AMIs – •Use the private key to use SSH to securely connect to your instance. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. mykey.pem Choices made by using the Launch Instance Wizard: 1.AMI 2.Instance Type 3.Network settings 4.IAM role 5.User data 6.Storage options 7.Tags 8.Security group 9.Key pair Amazon EC2 console view of a running EC2 instance 27© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Another option: Launch an EC2 instance with the AWS Command Line Interface •EC2 instances can also be created programmatically. •This example shows how simple the command can be. •This command assumes that the key pair and security group already exist. •More options could be specified. See the AWS CLI Command Reference for details. 28© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. aws ec2 run-instances \\ --image-id ami-1a2b3c4d \\ --count 1 \\ --instance-type c3.large \\ --key-name MyKeyPair \\ --security-groups MySecurityGroup \\ --region us-east-1 AWS Command Lin"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-15",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 15,
+    "text": "rights reserved. aws ec2 run-instances \\ --image-id ami-1a2b3c4d \\ --count 1 \\ --instance-type c3.large \\ --key-name MyKeyPair \\ --security-groups MySecurityGroup \\ --region us-east-1 AWS Command Line Interface (AWS CLI) Example command: Amazon EC2 instance lifecycle Only instances backed by Amazon EBS AMI pending Launch runningrebooting Reboot Start terminated shutting- down Terminate Terminate Stop Stop- Hibernate stoppingstopped © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.29 Consider using an Elastic IP address •Rebooting an instance will not change any IP addresses or DNS hostnames. •When an instance is stopped and then started again – •The public IPv4 address and external DNS hostname will change. •The private IPv4 address and internal DNS hostname do not change. 31 •If you require a persistent public IP address – •Associate an Elastic IP address with the instance. •Elastic IP address characteristics – •Can be associated with instances in the Region as needed. •Remains allocated to your account until you choose to release it. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Elastic IP Address EC2 instance metadata •Instance"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-16",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 16,
+    "text": "needed. •Remains allocated to your account until you choose to release it. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Elastic IP Address EC2 instance metadata •Instance metadata is data about your instance. •While you are connected to the instance, you can view it – •In a browser: http://169.254.169.254/latest/meta-data/ •In a terminal window: curl http://169.254.169.254/latest/meta-data/ •Example retrievable values – •Public IP address, private IP address, public hostname, instance ID, security groups, Region, Availability Zone. •Any user data specified at instance launch can also be accessed at: http://169.254.169.254/latest/user-data/ •It can be used to configure or manage a running instance. •For example, author a configuration script that reads the metadata and uses it to configure applications or OS settings. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.32 Amazon CloudWatch for monitoring •Use Amazon CloudWatch to monitor EC2 instances •Provides near-real-time metrics •Provides charts in the Amazon EC2 console Monitoring tab that you can view •Maintains 15 months of historical data •Basic monitoring •Default, no additi"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-17",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 17,
+    "text": "EC2 instances •Provides near-real-time metrics •Provides charts in the Amazon EC2 console Monitoring tab that you can view •Maintains 15 months of historical data •Basic monitoring •Default, no additional cost •Metric data sent to CloudWatch every 5 minutes •Detailed monitoring •Fixed monthly rate for seven pre-selected metrics •Metric data delivered every 1 minute 33© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Amazon CloudWatch Instance with CloudWatch © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Section 2 key takeaways 34 •Amazon EC2 enables you to run Windows and Linux virtual machines in the cloud. •You launch EC2 instances from an AMI template into a VPC in your account. •You can choose from many instance types. Each instance type offers different combinations of CPU, RAM, storage, and networking capabilities. •You can configure security groups to control access to instances (specify allowed ports and source). •User data enables you to specify a script to run the first time that an instance launches. •Only instances that are backed by Amazon EBS can be stopped. •You can use Amazon CloudWatch to capture and review metrics"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-18",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 18,
+    "text": "les you to specify a script to run the first time that an instance launches. •Only instances that are backed by Amazon EBS can be stopped. •You can use Amazon CloudWatch to capture and review metrics on EC2 instances. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Recorded Amazon EC2 demonstration 35 © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Lab 3: Introduction to Amazon EC2 36 Lab 3 scenario In this lab, you will launch and configure your first virtual machine that runs on Amazon EC2. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.37 Public subnet Lab VPC AWS Cloud Availability Zone 1 Web server instance Region Lab 3: Tasks •Task 1 – Launch Your Amazon EC2 Instance •Task 2 – Monitor Your Instance •Task 3 – Update Your Security Group and Access the Web Server •Task 4 – Resize Your Instance: Instance Type and EBS Volume •Task 5 – Explore EC2 Limits •Task 6 – Test Termination Protection 38© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Lab 3: Final product By the end of the lab, you will have: 1.Launched an instance that is configured as a web server 2.Viewed the instance system"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-19",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 19,
+    "text": "Services, Inc. or its Affiliates. All rights reserved. Lab 3: Final product By the end of the lab, you will have: 1.Launched an instance that is configured as a web server 2.Viewed the instance system log 3.Reconfigured a security group 4.Modified the instance type and root volume size 39© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Amazon EC2 Security group t2.micro instance Amazon Elastic Block Store (Amazon EBS) 8-GB root volume AMI 10-GB root volume VPC t2.small instance © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.40 Begin Lab 3: Introduction to Amazon EC2 ~ 35 minutes Begin Lab 1: Introduction to AWS IAM Lab debrief: Key takeaways 41© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Activity: Amazon EC2 42 Photo by Pixabay from Pexels. Activity: Gather information 43© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. still frame from architecting video about deploying SQL Server on EC2 screen grab of AWS Quick Starts webpage Amazon EC2Amazon RDS AWS Cloud Availability Zone 1Availability Zone 2 Volume Volume r"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-20",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 20,
+    "text": "ved. still frame from architecting video about deploying SQL Server on EC2 screen grab of AWS Quick Starts webpage Amazon EC2Amazon RDS AWS Cloud Availability Zone 1Availability Zone 2 Volume Volume replica Volume replica Volume Always-on mirroring MS SQL Server primary DB instance MS SQL Server secondary DB instance Activity: Check your understanding 1.Between Amazon EC2 or Amazon RDS, which provides a managed service? What does managed service mean? •ANSWER: Amazon RDS provides a managed service. Amazon RDS handles provisioning, installation and patching, automated backups, restoring snapshots from points in time, high availability, and monitoring. 2.Name at least one advantage of deploying Microsoft SQL Server on Amazon EC2 instead of Amazon RDS. •ANSWER: Amazon EC2 offers complete control over every configuration, the OS, and the software stack. 3.What advantage does the Quick Start provide over a manual installation on Amazon EC2? •ANSWER: The Quick Start is a reference architecture with proven best practices built into the design. 4.Which deployment option offers the best approach for all use cases? •ANSWER: Neither. The correct deployment option depends on your specific need"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-21",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 21,
+    "text": "re with proven best practices built into the design. 4.Which deployment option offers the best approach for all use cases? •ANSWER: Neither. The correct deployment option depends on your specific needs. 5.Which approach costs more: using Amazon EC2 or using Amazon RDS? •ANSWER: It depends. Managing the database deployment on Amazon EC2 requires more customer oversight and time. If time is your priority, then Amazon RDS might be less expensive. If you have in-house expertise, Amazon EC2 might be more cost-effective. 44© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Section 3: Amazon EC2 cost optimization M o d u l e 6 : C o m p u t e © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Amazon EC2 pricing models On-Demand Instances •Pay by the hour •No long-term commitments. •Eligible for the AWS Free Tier. Dedicated Hosts •A physical server with EC2 instance capacity fully dedicated to your use. Dedicated Instances •Instances that run in a VPC on hardware that is dedicated to a single customer. 46 Spot Instances •Instances run as long as they are available and your bid is above the Spot Instance price. •They can be interrupted by AWS with"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-22",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 22,
+    "text": "C on hardware that is dedicated to a single customer. 46 Spot Instances •Instances run as long as they are available and your bid is above the Spot Instance price. •They can be interrupted by AWS with a 2-minute notification. •Interruption options include terminated, stopped or hibernated. •Prices can be significantly less expensive compared to On-Demand Instances •Good choice when you have flexibility in when your applications can run. Reserved Instances •Full, partial, or no upfront payment for instance you reserve. •Discount on hourly charge for that instance. •1-year or 3-year term. Scheduled Reserved Instances •Purchase a capacity reservation that is always available on a recurring schedule you specify. •1-year term. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Per second billing available for On-Demand Instances, Reserved Instances, and Spot Instances that run Amazon Linux or Ubuntu. Amazon EC2 pricing models: Benefits On-Demand InstancesSpot InstancesReserved InstancesDedicated Hosts •Low cost and flexibility•Large scale, dynamic workload •Predictability ensures compute capacity is available when needed •Save money on licensing costs •Help meet co"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-23",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 23,
+    "text": "Reserved InstancesDedicated Hosts •Low cost and flexibility•Large scale, dynamic workload •Predictability ensures compute capacity is available when needed •Save money on licensing costs •Help meet compliance and regulatory requirements © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.47 Amazon EC2 pricing models: Use cases On-Demand InstancesSpot InstancesReserved InstancesDedicated Hosts •Short-term, spiky, or unpredictable workloads •Application development or testing •Applications with flexible start and end times •Applications only feasible at very low compute prices •Users with urgent computing needs for large amounts of additional capacity •Steady state or predictable usage workloads •Applications that require reserved capacity, including disaster recovery •Users able to make upfront payments to reduce total computing costs even further •Bring your own license (BYOL) •Compliance and regulatory restrictions •Usage and licensing tracking •Control instance placement © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.48 Spiky WorkloadsSteady-State WorkloadsTime-Insensitive Workloads Highly Sensitive Workloads The four pillars of cost o"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-24",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 24,
+    "text": "acement © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.48 Spiky WorkloadsSteady-State WorkloadsTime-Insensitive Workloads Highly Sensitive Workloads The four pillars of cost optimization © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.49 Right size Optimal pricing model Increase elasticity Optimize storage choices Cost Optimization ✓Provision instances to match the need •CPU, memory, storage, and network throughput •Select appropriate instance types for your use ✓Use Amazon CloudWatch metrics •How idle are instances? When? •Downsize instances ✓Best practice: Right size, then reserve 50© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. 1. Right size 2. Increase elasticity 3. Optimal pricing model 4. Optimize storage choices   Pillars: Pillar 1: Right size © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.51 ✓Stop or hibernate Amazon EBS-backed instances that are not actively in use •Example: non-production development or test instances ✓Use automatic scaling to match needs based on usage •Automated and time-based elasticity Pillar 2: Increase elasticity 1. Right-Size 2. Increase Elasticity"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-25",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 25,
+    "text": "on-production development or test instances ✓Use automatic scaling to match needs based on usage •Automated and time-based elasticity Pillar 2: Increase elasticity 1. Right-Size 2. Increase Elasticity 3. Optimal pricing model 4. Optimize storage choices   Pillars: © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.52 ✓Leverage the right pricing model for your use case •Consider your usage patterns ✓Optimize and combine purchase types ✓Examples: •Use On-Demand Instance and Spot Instances for variable workloads •Use Reserved Instances for predictable workloads ✓Consider serverless solutions (AWS Lambda) Pillar 3: Optimal pricing model 1. Right-Size 2. Increase Elasticity 3. Optimal pricing model 4. Optimize storage choices   Pillars: © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.53 ✓Reduce costs while maintaining storage performance and availability ✓Resize EBS volumes ✓Change EBS volume types ✓Can you meet performance requirements with less expensive storage? ✓Example: Amazon EBS Throughput Optimized HDD (st1) storage typically costs half as much as the default General Purpose SSD (gp2) storage option. ✓Delete EBS snapshots that are"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-26",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 26,
+    "text": "less expensive storage? ✓Example: Amazon EBS Throughput Optimized HDD (st1) storage typically costs half as much as the default General Purpose SSD (gp2) storage option. ✓Delete EBS snapshots that are no longer needed ✓Identify the most appropriate destination for specific types of data ✓Does the application need the instance to reside on Amazon EBS? ✓Amazon S3 storage options with lifecycle policies can reduce costs Pillar 4: Optimize storage choices 1. Right-Size 2. Increase Elasticity 3. Optimal pricing model 4. Optimize storage choices   Pillars: Measure, monitor, and improve •Cost optimization is an ongoing process. •Recommendations – •Define and enforce cost allocation tagging. •Define metrics, set targets, and review regularly. •Encourage teams to architect for cost. •Assign the responsibility of optimization to an individual or to a team. 54© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Section 3 key takeaways 55 •Amazon EC2 pricing models include On-Demand Instances, Reserved Instances, Spot Instances, Dedicated Instances, and Dedicated Hosts. •Spot Instances can be interru"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-27",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 27,
+    "text": "eserved. Section 3 key takeaways 55 •Amazon EC2 pricing models include On-Demand Instances, Reserved Instances, Spot Instances, Dedicated Instances, and Dedicated Hosts. •Spot Instances can be interrupted with a 2-minute notification. However, they can offer significant cost savings over On-Demand Instances. •The four pillars of cost optimization are: •Right size •Increase elasticity •Optimal pricing model •Optimize storage choices Section 4: Container services M o d u l e 6 : C o m p u t e © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Container basics •Containers are a method of operating system virtualization. •Benefits – •Repeatable. •Self-contained execution environments. •Software runs the same in different environments. •Developer's laptop, test, production. •Faster to launch and stop or terminate than virtual machines Your application Dependencies Configurations Hooks into OS Your Container © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.57 What is Docker? •Docker is a software platform that enables you to build, test, and deploy applications quickly. •You run containers on Docker. •Containers are created from a template cal"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-28",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 28,
+    "text": "reserved.57 What is Docker? •Docker is a software platform that enables you to build, test, and deploy applications quickly. •You run containers on Docker. •Containers are created from a template called an image. •A container has everything a software application needs to run. 58© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Containers have everything the software needs to run: Libraries System tools CodeRuntime Container Containers versus virtual machines Three virtual machines on three EC2 instances Container Physical server Host operating system Hypervisor EC2 instance guest OS EC2 instance guest OS EC2 instance guest OS Bins/Libs App 1 Bins/Libs App 2 Bins/Libs App 3 Docker engine Bins/Libs App 1 Bins/Libs App 2 Bins/Libs App 3 Three containers on one EC2 instance EC2 instance guest OS Container instance 1 Container instance 2 Container instance 3 Part of AWS Global Infrastructure Example VM 3VM 2VM 1 © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.59 Amazon Elastic Container Service (Amazon ECS) •Amazon Elastic Container Service (Amazon ECS) – •A highly scalable, fast, container management service •Key benefits – •Orchestrates"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-29",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 29,
+    "text": "l rights reserved.59 Amazon Elastic Container Service (Amazon ECS) •Amazon Elastic Container Service (Amazon ECS) – •A highly scalable, fast, container management service •Key benefits – •Orchestrates the execution of Docker containers •Maintains and scales the fleet of nodes that run your containers •Removes the complexity of standing up the infrastructure •Integrated with features that are familiar to Amazon EC2 service users – •Elastic Load Balancing •Amazon EC2 security groups •Amazon EBS volumes •IAM roles 60© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Amazon Elastic Container Service Amazon ECS orchestrates containers Amazon Elastic Container Service (Amazon ECS) Container A Container B Requests to run containers x3 x2 EC2 instance EC2 instance ECS cluster © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.61 Amazon ECS cluster options •Key question: Do you want to manage the Amazon ECS cluster that runs the containers? •If yes, create an Amazon ECS cluster backed by Amazon EC2 (provides more granular control over infrastructure) •If no, create an Amazon ECS cluster backed by AWS Fargate (easier to maintain, focus on your appli"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-30",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 30,
+    "text": "eate an Amazon ECS cluster backed by Amazon EC2 (provides more granular control over infrastructure) •If no, create an Amazon ECS cluster backed by AWS Fargate (easier to maintain, focus on your applications) 62© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Docker engines (one per OS in the cluster) Bins/Libs App 1 Bins/Libs App 2 Bins/Libs App 3 Containers VM guest operating systems in the Amazon ECS cluster Container instance 1 Container instance 2 Container instance 3 AWS manages You manage Amazon ECS cluster backed by Fargate Amazon ECS cluster backed by Amazon EC2 You manage What is Kubernetes? •Kubernetes is open source software for container orchestration. •Deploy and manage containerized applications at scale. •The same toolset can be used on premises and in the cloud. •Complements Docker. •Docker enables you to run multiple containers on a single OS host. •Kubernetes orchestrates multiple Docker hosts (nodes). •Automates – •Container provisioning. •Networking. •Load distribution. •Scaling. 63© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Amazon Elastic Kubernetes Service (Amazon EKS) •Amazon Elastic Kubernetes Service (Am"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-31",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 31,
+    "text": "tworking. •Load distribution. •Scaling. 63© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Amazon Elastic Kubernetes Service (Amazon EKS) •Amazon Elastic Kubernetes Service (Amazon EKS) •Enables you to run Kubernetes on AWS •Certified Kubernetes conformant (supports easy migration) •Supports Linux and Windows containers •Compatible with Kubernetes community tools and supports popular Kubernetes add-ons •Use Amazon EKS to – •Manage clusters of Amazon EC2 compute instances •Run containers that are orchestrated by Kubernetes on those instances 64© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Amazon Elastic Kubernetes Service Amazon Elastic Container Registry (Amazon ECR) Amazon ECR is a fully managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images. 65© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Amazon Elastic Container Registry RegistryImage Amazon ECS integration Docker support Team collaboration Access control Third-party integrations © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Section 4 key takeaways •Containers"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-32",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 32,
+    "text": "ECS integration Docker support Team collaboration Access control Third-party integrations © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Section 4 key takeaways •Containers can hold everything that an application needs to run. •Docker is a software platform that packages software into containers. •A single application can span multiple containers. •Amazon Elastic Container Service (Amazon ECS) orchestrates the execution of Docker containers. •Kubernetes is open source software for container orchestration. •Amazon Elastic Kubernetes Service (Amazon EKS) enables you to run Kubernetes on AWS •Amazon Elastic Container Registry (Amazon ECR) enables you to store, manage, and deploy your Docker containers. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.66 Section 5: Introduction to AWS Lambda M o d u l e 6 : C o m p u t e © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.67 AWS Lambda: Run code without servers © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.68 AWS Lambda is a serverless compute service. Run your code on a schedule or in response to events Pay only for the compute time that yo"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-33",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 33,
+    "text": "azon Web Services, Inc. or its Affiliates. All rights reserved.68 AWS Lambda is a serverless compute service. Run your code on a schedule or in response to events Pay only for the compute time that you use AWS services Mobile apps HTTP endpoints Upload your code Your code runs only when it is triggered The code you run is a Lambda function Benefits of Lambda It supports multiple programming languages Completely automated administration Built-in fault tolerance It supports the orchestration of multiple functions Pay-per-use pricing © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.69 AWS Lambda AWS Lambda event sources © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.70 Event sources Configure other AWS services as event sources to invoke your function as shown here. Alternatively, invoke a Lambda function from the Lambda console, AWS SDK, or AWS CLI. Lambda function AWS Lambda Amazon CloudWatch Execution of your code (only when triggered) Logging, monitoring, and metrics Amazon S3 Amazon DynamoDB Amazon Simple Notification Service (Amazon SNS) Amazon Simple Queue Service (Amazon SQS) Amazon API Gateway Application Load Balancer Many more"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-34",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 34,
+    "text": "gging, monitoring, and metrics Amazon S3 Amazon DynamoDB Amazon Simple Notification Service (Amazon SNS) Amazon Simple Queue Service (Amazon SQS) Amazon API Gateway Application Load Balancer Many more... AWS Lambda function configuration Lambda function configuration Function code Dependencies (code libraries, etc.) Execution role AWS Lambda Amazon CloudWatch AWS Lambda function Execution of your code (only when it is triggered) Logging, monitoring, and metrics © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.71 Schedule-based Lambda function example: Start and stop EC2 instances 72© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Stop instances example Start instances example 2 IAM role Lambda function triggered 1 Time-based CloudWatch event 3 Stop EC2 instances stopped 5 IAM role Lambda function triggered 4 EC2 instances started 6 Start Time-based CloudWatch event © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Event-based Lambda function example: Create thumbnail images © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.73 Source bucket Target bucket 1 3 Access policy Lambda function User"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-35",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 35,
+    "text": "ent-based Lambda function example: Create thumbnail images © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.73 Source bucket Target bucket 1 3 Access policy Lambda function User 5 Lambda 2 AWS Cloud 4 Execution role AWS Lambda limits Soft limits per Region: •Concurrent executions = 1,000 •Function and layer storage = 75 GB Hard limits for individual functions: •Maximum function memory allocation = 3,008 MB •Function timeout = 15 minutes •Deployment package size = 250 MB unzipped, including layers Additional limits also exist. Details are in the AWS Lambda Limits documentation. 74© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Section 5 key takeaways 75 •Serverless computing enables you to build and run applications and services without provisioning or managing servers. •AWS Lambda is a serverless compute service that provides built-in fault tolerance and automatic scaling. •An event source is an AWS service or developer- created application that triggers a Lambda function to run. •The maximu"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-36",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 36,
+    "text": "s compute service that provides built-in fault tolerance and automatic scaling. •An event source is an AWS service or developer- created application that triggers a Lambda function to run. •The maximum memory allocation for a single Lambda function is 3,008 MB. •The maximum execution time for a Lambda function is 15 minutes. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Activity: Create an AWS Lambda Stopinator Function 76 Photo by Pixabay from Pexels. To complete this activity: •Go to the hands-on lab environment and launch the AWS Lambda activity. •Follow the instructions that are provided in the hands-on lab environment. Activity debrief: key takeaways 77© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Section 6: Introduction to AWS Elastic Beanstalk M o d u l e 6 : C o m p u t e © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. AWS Elastic Beanstalk •An easy way to get web applications up and running •A managed service that automatically handles – •Infrastructure provisioning and configuration •Deployment •Load balancing •Automatic scaling •Health monitoring •Analysis and debugging •Logging •No additional"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-37",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 37,
+    "text": "ed service that automatically handles – •Infrastructure provisioning and configuration •Deployment •Load balancing •Automatic scaling •Health monitoring •Analysis and debugging •Logging •No additional charge for Elastic Beanstalk •Pay only for the underlying resources that are used 79© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. AWS Elastic Beanstalk AWS Elastic Beanstalk deployments •It supports web applications written for common platforms •Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker •You upload your code •Elastic Beanstalk automatically handles the deployment •Deploys on servers such as Apache, NGINX, Passenger, Puma, and Microsoft Internet Information Services (IIS) 80© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Your code HTTP server Application server Language interpreter Operating system Host AWS manages You manage Benefits of Elastic Beanstalk Fast and simple to start using Developer productivity Difficult to outgrow Complete resource control © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.81 © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Activity: AWS Elastic"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-38",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 38,
+    "text": "row Complete resource control © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.81 © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Activity: AWS Elastic Beanstalk 82 To complete this activity: •Go to the hands-on lab environment and launch the AWS Elastic Beanstalk activity. •Follow the instructions that are provided in the hands-on lab environment. Activity debrief: Key takeaways 83© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Section 6 key takeaways 84 •AWS Elastic Beanstalk enhances developer productivity. •Simplifies the process of deploying your application. •Reduces management complexity. •Elastic Beanstalk supports Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker •There is no charge for Elastic Beanstalk. Pay only for the AWS resources that you use. Module wrap-up M o d u l e 6 : C o m p u t e © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Module summary In summary, in this module, you learned how to: •Provide an overview of different AWS compute services in the cloud •Demonstrate why to use Amazon"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-39",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 39,
+    "text": "its Affiliates. All rights reserved. Module summary In summary, in this module, you learned how to: •Provide an overview of different AWS compute services in the cloud •Demonstrate why to use Amazon Elastic Compute Cloud (Amazon EC2) •Identify the functionality in the Amazon EC2 console •Perform basic functions in Amazon EC2 to build a virtual computing environment •Identify Amazon EC2 cost optimization elements •Demonstrate when to use AWS Elastic Beanstalk •Demonstrate when to use AWS Lambda •Identify how to run containerized applications in a cluster of managed servers 86© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Complete the knowledge check 87© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. Sample exam question Which AWS service helps developers quickly deploy resources which can make use of different programming languages, such as .NET and Java? A.AWS CloudFormation B.AWS SQS C.AWS Elastic Beanstalk D.Amazon Elastic Compute Cloud (Amazon EC2) 88© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. 89 •Amazon EC2 Documentation •Amazon EC2 Pricing •Amazon ECS Workshop •Running Containers on AWS •Amazon EKS"
+  },
+  {
+    "id": "AcademyCloudFoundations_Module_06.pdf-chunk-40",
+    "document": "AcademyCloudFoundations_Module_06.pdf",
+    "pageStart": null,
+    "pageEnd": null,
+    "chunkIndex": 40,
+    "text": "oud (Amazon EC2) 88© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. 89 •Amazon EC2 Documentation •Amazon EC2 Pricing •Amazon ECS Workshop •Running Containers on AWS •Amazon EKS Workshop •AWS Lambda Documentation •AWS Elastic Beanstalk Documentation •Cost Optimization Playbook Additional resources © 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved. © 2019 Amazon Web Services, Inc. or its affiliates. All rights reserved. This work may not be reproduced or redistributed, in whole or in part, without prior written permission from Amazon Web Services, Inc. Commercial copying, lending, or selling is prohibited. Corrections or feedback on the course, please email us at:aws-course-feedback@amazon.com. For all other questions, contact us at: https://aws.amazon.com/contact-us/aws-training/. All trademarks are the property of their owners. Thank you"
+  }
+]

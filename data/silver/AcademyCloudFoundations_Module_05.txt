@@ -1,0 +1,943 @@
+
+
+A W S   A c a d e m y   C l o u d   F o u n d a t i o n s
+Module 5: Networking and Content 
+Delivery
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Module overview
+Topics
+•Networking basics
+•Amazon VPC
+•VPC networking
+•VPC security
+•Amazon Route 53 
+•Amazon CloudFront
+Activities
+•Label a network diagram
+•Design a basic VPC architecture
+Demo
+•VPC demonstration
+Lab
+•Build your VPC and launch a web server
+Knowledge check
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.2
+
+Module objectives
+After completing this module, you should be able to:
+•Recognize the basics of networking
+•Describe virtual networking in the cloud with Amazon VPC
+•Label a network diagram
+•Design a basic VPC architecture
+•Indicate the steps to build a VPC
+•Identify security groups
+•Create your own VPC and add additional components to it to produce a customized 
+network
+•Identify the fundamentals of Amazon Route 53
+•Recognize the benefits of Amazon CloudFront
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.3
+
+M o d u l e   5 :   N e t w o r k i n g   a n d   C o n t e n t   D e l i v e r y
+Section 1: Networking basics
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Networks
+Subnet 1
+Router
+Subnet 2
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.5
+
+IP addresses
+192
+11000000
+.0
+00000000
+.2
+00000010
+.0
+00000000
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.6
+
+IPv4 and IPv6 addresses
+IPv4 (32-bit) address: 192.0.2.0
+IPv6 (128-bit) address: 2600:1f18:22ba:8c00:ba86:a05e:a5ba:00FF
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.7
+
+Classless Inter-Domain Routing (CIDR)
+Network identifier (routing prefix)
+192
+11000000
+Fixed
+.
+0
+00000000
+Fixed
+.2
+00000010
+Fixed
+.
+Host identifier
+0
+00000000 
+to 11111111
+Flexible
+/24
+Tells you how
+many bits are 
+fixed
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.8
+
+Open Systems Interconnection (OSI) model
+LayerNumberFunctionProtocol/Address
+Application7Means for an application to access a computer network
+HTTP(S), FTP, DHCP, 
+LDAP
+Presentation6
+•Ensures that the application layer can read the data
+•Encryption
+ASCI, ICA
+Session5Enables orderly exchange of dataNetBIOS, RPC
+Transport4Provides protocols to support host-to-host communicationTCP, UDP
+Network3Routing and packet forwarding (routers)IP
+Data link2Transfer data in the same LAN network (hubs and switches)MAC
+Physical1Transmission and reception of raw bitstreams over a physical mediumSignals (1s and 0s)
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.9
+
+M o d u l e   5 :   N e t w o r k i n g   a n d   C o n t e n t   D e l i v e r y
+Section 2: Amazon VPC
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Amazon VPC
+Amazon 
+VPC
+•Enables you to provision a logically isolated section of the AWS 
+Cloud where you can launch AWS resources in a virtual network 
+that you define
+•Gives you control over your virtual networking resources, 
+including:
+•Selection of IP address range
+•Creation of subnets
+•Configuration of route tables and network gateways
+•Enables you to customize the network configuration for your 
+VPC
+•Enables you to use multiple layers of security
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.11
+
+VPCs and subnets
+•VPCs:
+•Logically isolated from other VPCs
+•Dedicated to your AWS account
+•Belong to a single AWS Region and 
+can span multiple Availability Zones
+•Subnets:
+•Range of IP addresses that divide a 
+VPC
+•Belong to a single Availability Zone
+•Classified as public or private
+AWS Cloud
+Region
+Availability Zone 1Availability Zone 2
+VPC
+SubnetSubnet
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.12
+
+IP addressing
+•When you create a VPC, you assign it to an 
+IPv4 CIDR block (range of private IPv4 
+addresses).
+•You cannot change the address range after 
+you create the VPC.
+•The largest IPv4 CIDR block size is /16.
+•The smallest IPv4 CIDR block size is /28.
+•IPv6 is also supported (with a different 
+block size limit).
+•CIDR blocks of subnets cannot overlap.
+x.x.x.x/16 or 65,536 addresses (max)
+to
+x.x.x.x/28 or 16 addresses (min)
+VPC
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.13
+
+Reserved IP addresses
+Example: A VPC with an IPv4 CIDR block of 10.0.0.0/16 has 65,536 total IP addresses.
+The VPC has four equal-sized subnets. Only 251 IP addresses are available for use by each 
+subnet.
+Subnet 1 (10.0.0.0/24)
+Subnet 4 (10.0.1.0/24)
+Subnet 2 (10.0.2.0/24)
+Subnet 3 (10.0.3.0/24)
+VPC: 10.0.0.0/16
+251 IP addresses
+251 IP addresses
+251 IP addresses
+251 IP addresses
+IP Addresses for CIDR 
+block 10.0.0.0/24
+Reserved for
+10.0.0.0Network address
+10.0.0.1Internal communication
+10.0.0.2
+Domain Name System 
+(DNS) resolution
+10.0.0.3Future use
+10.0.0.255
+Network broadcast 
+address
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.14
+
+Public IP address types
+Public IPv4 address
+•Manually assigned through an 
+Elastic IP address
+•Automatically assigned through the 
+auto-assign public IP address 
+settings at the subnet level
+Elastic IP address
+•Associated with an AWS account
+•Can be allocated and remapped 
+anytime
+•Additional costs might apply
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.15
+
+Elastic network interface
+•An elastic network interface is a virtual network interface that you can:
+•Attach to an instance.
+•Detach from the instance, and attach to another instance to redirect network traffic.
+•Its attributes follow when it is reattached to a new instance.
+•Each instance in your VPC has a default network interface that is assigned a 
+private IPv4 address from the IPv4 address range of your VPC.
+Subnet: 10.0.1.0/24
+Elastic network interface
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.16
+
+Route tables and routes
+•A route table contains a set of rules (or 
+routes) that you can configure to direct 
+network traffic from your subnet.
+•Each route specifies a destination and a 
+target. 
+•By default, every route table contains a 
+local route for communication within the 
+VPC.
+•Each subnet must be associated with a 
+route table (at most one).
+Main (Default) Route Table
+DestinationTarget
+10.0.0.0/16local
+VPC CIDR block
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.17
+
+Section 2 key 
+takeaways
+•A VPC is a logically isolated section of the 
+AWS Cloud.
+•A VPC belongs to one Region and requires 
+a CIDR block.
+•A VPC is subdivided into subnets.
+•A subnet belongs to one Availability Zone 
+and requires a CIDR block.
+•Route tables control traffic for a subnet.
+•Route tables have a built-in local route.
+•You add additional routes to the table.
+•The local route cannot be deleted.
+18© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+M o d u l e   5 :   N e t w o r k i n g   a n d   C o n t e n t   D e l i v e r y
+Section 3: VPC networking
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Internet gateway
+Availability Zone
+Public subnet:10.0.1.0/24
+Route
+table
+Private subnet: 10.0.2.0/24
+Internet
+AWS Cloud
+Region
+VPC: 10.0.0.0/16
+Internet
+gateway
+(igw-id)
+Public Subnet Route Table
+DestinationTarget
+10.0.0.0/16local
+0.0.0.0/0igw-id
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.20
+
+Network address translation (NAT) gateway
+Availability Zone
+Public subnet:10.0.1.0/24
+Private subnet: 10.0.2.0/24
+Internet
+AWS Cloud
+Region
+VPC: 10.0.0.0/16
+NAT gateway
+(nat-gw-id)
+Internet
+gateway
+(igw-id)
+Public route
+table
+Private route
+table
+Public Subnet Route Table
+DestinationTarget
+10.0.0.0/16local
+0.0.0.0/0igw-id
+Private Subnet Route Table
+DestinationTarget
+10.0.0.0/16local
+0.0.0.0/0nat-gw-id
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.21
+
+VPC sharing
+VPC: Account A (owner)
+Private subnet
+AWS Cloud
+Public subnet
+Region
+Account B (participant)Account C (participant)
+Account D (participant)
+EC2 
+instance
+EC2 
+instance
+EC2 
+instance
+RDS 
+instance
+EC2 instance
+Amazon
+Redshift
+NAT gateway
+Internet 
+gateway
+Router
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.22
+
+VPC peering
+AWS Cloud
+VPC A: 10.0.0.0/16VPC B: 10.3.0.0/16
+Peering
+connection
+(pcx-id)
+Route Table for VPC A
+DestinationTarget
+10.0.0.0/16local
+10.3.0.0/16pcx-id
+Route Table for VPC B
+DestinationTarget
+10.3.0.0/16local
+10.0.0.0/16pcx-id
+You can connect VPCs in your 
+own AWS account, between 
+AWS accounts, or between AWS 
+Regions.
+Restrictions:
+•IP spaces cannot overlap.
+•Transitive peering is not 
+supported.
+•You can only have one 
+peering resource between 
+the same two VPCs.
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.23
+
+AWS Site-to-Site VPN
+Internet
+Site-to-Site 
+VPN 
+connection
+Customer 
+gateway
+Corporate data center:
+192.168.10.0/24
+Availability Zone
+Public subnet:10.1.0.0/24
+Private subnet: 10.0.2.0/24
+AWS Cloud
+Region
+VPC: 10.0.0.0/16
+Virtual
+gateway
+(vgw-id)
+Route
+table
+Public subnet route table
+DestinationTarget
+10.0.0.0/16local
+0.0.0.0/0igw-id
+Private subnet route table
+DestinationTarget
+10.0.0.0/16local
+192.168.10.0/24vgw-id
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.24
+
+AWS Direct Connect
+Availability Zone
+Public subnet:10.1.0.0/24
+Private subnet: 10.0.2.0/24
+Internet
+AWS Cloud
+Region
+VPC: 10.0.0.0/16
+Customer 
+gateway
+Corporate data center:
+192.168.10.0/24
+Virtual
+gateway
+AWS Direct 
+Connect
+802.1q
+VLAN
+Route
+table
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.25
+
+VPC endpoints
+Availability Zone
+Public subnet:10.0.1.0/24
+Private subnet: 10.0.2.0/24
+Amazon
+Simple Storage 
+Service (Amazon 
+S3)
+AWS Cloud
+Region
+VPC: 10.0.0.0/16
+VPC 
+endpoint
+(vpcep-id)
+Public Subnet Route Table
+DestinationTarget
+10.0.0.0/16local
+Amazon S3 IDvpcep-id
+Two types of endpoints:
+•Interface endpoints 
+(powered by AWS 
+PrivateLink)
+•Gateway endpoints 
+(Amazon S3 and Amazon 
+DynamoDB)
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.26
+
+AWS Transit Gateway
+From this...
+VPN
+connection
+VPN
+connection
+VPN
+connection
+Amazon
+VPC
+Amazon
+VPC
+VPC
+peering
+VPC
+peering
+VPC
+peering
+VPC
+peering
+Amazon
+VPC
+Amazon
+VPC
+VPC
+peering
+AWS Direct 
+Connect 
+gateway
+Customer 
+gateway
+To this...
+Amazon
+VPC
+Amazon
+VPC
+Amazon
+VPC
+Amazon
+VPC
+AWS Direct 
+Connect 
+gateway
+VPN
+connection
+AWS 
+Transit Gateway
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.27
+
+Activity: Label this network diagram
+AWS Cloud
+Private subnet: 10.0.2.0/24
+10.0.0.0/16
+Public subnet:10.0.1.0/24
+Q6
+?
+_?_ IP address
+?
+?
+?
+?
+?
+?
+?
+Internet
+_?_ IP address
+DestinationTarget
+?local
+0.0.0.0/0?
+?
+?
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.28
+
+Activity: Solution
+Private subnet: 10.0.2.0/24
+AWS Cloud
+10.0.0.0/16
+Public subnet:10.0.1.0/24
+NAT gateway
+Elastic
+network
+interface
+Private IP address
+Region
+VPC
+Internet
+gateway
+Private subnet
+Route table
+Public subnet
+Internet
+Availability Zone
+Private IP address
+DestinationTarget
+10.0.0.0/16local
+0.0.0.0/0igw-id
+Route table
+Route
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.29
+
+Recorded Amazon 
+VPC demonstration
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.30
+
+Section 3 key 
+takeaways
+•There are several VPC networking 
+options, which include:
+•Internet gateway
+•NAT gateway
+•VPC endpoint
+•VPC peering
+•VPC sharing
+•AWS Site-to-Site VPN
+•AWS Direct Connect
+•AWS Transit Gateway
+•You can use the VPC Wizard to 
+implement your design.
+31© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+M o d u l e   5 :   N e t w o r k i n g   a n d   C o n t e n t   D e l i v e r y
+Section 4: VPC security
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Security groups
+Availability Zone
+Public subnet:10.0.1.0/24
+Private subnet: 10.0.2.0/24
+AWS Cloud
+Region
+VPC: 10.0.0.0/16
+Security group
+Security group
+Security groups act at 
+the instance level.
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.33
+
+Security groups
+•Security groups have rules that control inbound and outbound instance traffic. 
+•Default security groups deny all inbound traffic and allow all outbound traffic.
+•Security groups are stateful.
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.34
+
+Custom security groups
+•You can specify allow rules, but not deny rules.
+•All rules are evaluated before the decision to allow traffic.
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.35
+
+Network access control lists (network 
+ACLs)
+AWS Cloud
+Region
+VPC: 10.0.0.0/16
+Availability Zone
+Public subnet:10.0.0.0/24
+Private subnet: 10.0.4.0/22
+Network ACLs act at 
+the subnet level.
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.36
+
+Network ACLs
+•A network ACL has separate inbound and outbound rules, and each rule can 
+either allow or deny traffic.
+•Default network ACLs allow all inbound and outbound IPv4 traffic.
+•Network ACLs are stateless.
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.37
+
+Custom network ACLs
+•Custom network ACLs deny all inbound and outbound traffic until you add rules.
+•You can specify both allow and deny rules. 
+•Rules are evaluated in number order, starting with the lowest number.
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.38
+
+Security groups versus network ACLs
+AttributeSecurity GroupsNetwork ACLs
+ScopeInstance levelSubnet level
+Supported RulesAllow rules onlyAllow and deny rules
+State
+Stateful (return traffic is automatically 
+allowed, regardless of rules)
+Stateless (return traffic must be explicitly 
+allowed by rules)
+Order of Rules
+All rules are evaluated before decision 
+to allow traffic
+Rules are evaluated in number order before 
+decision to allow traffic
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.39
+
+Activity: Design a VPC
+Scenario: You have a small business with a website that is hosted on an Amazon Elastic 
+Compute Cloud (Amazon EC2) instance. You have customer data that is stored on a 
+backend database that you want to keep private. You want to use Amazon VPC to set up a 
+VPC that meets the following requirements: 
+•Your web server and database server must be in separate subnets.
+•The first address of your network must be 10.0.0.0. Each subnet must have 256 total 
+IPv4 addresses.
+•Your customers must always be able to access your web server.
+•Your database server must be able to access the internet to make patch updates.
+•Your architecture must be highly available and use at least one custom firewall layer.
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.40
+
+Section 4 key 
+takeaways
+•Build security into your VPC 
+architecture:
+•Isolate subnets if possible.
+•Choose the appropriate gateway device 
+or VPN connection for your needs.
+•Use firewalls.
+•Security groups and network ACLs 
+are firewall options that you can use 
+to secure your VPC.
+41© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Lab 2: 
+Build Your VPC and 
+Launch a Web 
+Server
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.42
+
+Lab 2: Scenario
+In this lab, you use Amazon VPC to create your own VPC and add some 
+components to produce a customized network. You create a security group 
+for your VPC. You also create an EC2 instance and configure it to run a web 
+server and to use the security group. You then launch the EC2 instance into 
+the VPC.
+Amazon 
+VPC
+Amazon 
+EC2
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.43
+
+Lab 2: Tasks
+•Create a VPC.
+•Create additional subnets.
+•Create a VPC security group.
+•Launch a web server instance.
+Security 
+group
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.44
+
+Lab 2: Final product
+Availability Zone A
+Public subnet 1:
+   10.0.0.0/24
+Private subnet 1: 
+   10.0.1.0/24
+AWS Cloud
+Region
+VPC: 10.0.0.0/16
+Internet
+gateway
+Availability Zone B
+Public subnet 2:
+   10.0.2.0/24
+Private subnet 2: 
+   10.0.3.0/24
+Security group
+NAT 
+gateway
+Web
+server
+Public Route Table
+DestinationTarget
+10.0.0.0/16Local
+0.0.0.0/0Internet gateway
+Private Route Table
+DestinationTarget
+10.0.0.0/16Local
+0.0.0.0/0NAT gateway
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.45
+
+Build Your VPC and Launch a Web Server
+Begin Lab 2: Build Your 
+VPC and Launch a Web 
+Server 
+~ 30 minutes
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.46
+
+Lab debrief: 
+Key takeaways
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.47
+
+Section 5: Amazon Route 53
+M o d u l e   5 :   N e t w o r k i n g   a n d   C o n t e n t   D e l i v e r y
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Amazon Route 53
+Amazon
+Route 53
+•Is a highly available and scalable Domain Name System (DNS) web service
+•Is used to route end users to internet applications by translating names (like 
+www.example.com) into numeric IP addresses (like 192.0.2.1) that computers 
+use to connect to each other
+•Is fully compliant with IPv4 and IPv6
+•Connects user requests to infrastructure running in AWS and also outside of 
+AWS
+•Is used to check the health of your resources
+•Features traffic flow
+•Enables you to register domain names
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.49
+
+Amazon Route 53 DNS resolution
+UserDNS resolverAmazon Route 
+53
+Requests 
+www.example.com
+Checks with Route 53 
+for IP address
+Returns IP address 
+192.0.2.0
+Returns IP address 
+192.0.2.0
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.50
+
+Amazon Route 53 supported routing
+•Simple routing – Use in single-server environments
+•Weighted round robin routing – Assign weights to resource record sets to specify the 
+frequency
+•Latency routing – Help improve your global applications
+•Geolocation routing – Route traffic based on location of your users
+•Geoproximity routing – Route traffic based on location of your resources
+•Failover routing – Fail over to a backup site if your primary site becomes unreachable
+•Multivalue answer routing – Respond to DNS queries with up to eight healthy records 
+selected at random
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.51
+
+Use case: Multi-region deployment
+User
+some-elb-name.ap-southeast-2.elb.amazonaws.com
+some-elb-name.us-west-2.elb.amazonaws.com
+Amazon Route 53
+NameTypeValue
+example.comALIASsome-elb-name.us-west-2.elb.amazonaws.com
+example.comALIASsome-elb-name.ap-southeast-2.elb.amazonaws.com
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.52
+
+Amazon Route 53 DNS failover
+Improve the availability of your applications that run on AWS by:
+•Configuring backup and failover scenarios for your own applications
+•Enabling highly available multi-region architectures on AWS
+•Creating health checks
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.53
+
+DNS failover for a multi-tiered web 
+application
+Secondary
+Availability Zone BAvailability Zone A
+Amazon Relational 
+Database Service 
+(Amazon RDS)
+instance
+Amazon Relational 
+Database Service 
+(Amazon RDS)
+instance
+User
+Amazon S3 
+static website
+Primary
+Amazon EC2
+AWS Cloud
+Auto Scaling group
+Amazon EC2
+Amazon Route 
+53
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.54
+
+Section 5 key 
+takeaways
+•Amazon Route 53 is a highly available and 
+scalable cloud DNS web service that 
+translates domain names into numeric IP 
+addresses.
+•Amazon Route 53 supports several types of 
+routing policies.
+•Multi-Region deployment improves your 
+application’s performance for a global 
+audience.
+•You can use Amazon Route 53 failover to 
+improve the availability of your 
+applications.
+55© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+M o d u l e   5 :   N e t w o r k i n g   a n d   C o n t e n t   D e l i v e r y
+Section 6: Amazon CloudFront
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Content delivery and network latency
+User
+Origin server
+Router
+Router
+Router
+Router
+Hop
+Hop
+Hop
+Hop
+Hop
+Hop
+Hop
+Client
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.9
+
+Content delivery network (CDN)
+•Is a globally distributed system of caching servers
+•Caches copies of commonly requested files (static content)
+•Delivers a local copy of the requested content from a nearby cache edge or 
+Point of Presence 
+•Accelerates delivery of dynamic content
+•Improves application performance and scaling
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.10
+
+Amazon CloudFront
+Amazon 
+CloudFront
+•Fast, global, and secure CDN service
+•Global network of edge locations and 
+Regional edge caches
+•Self-service model 
+•Pay-as-you-go pricing
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.59
+
+Amazon CloudFront infrastructure
+Edge locations
+Multiple edge locations
+Regional edge caches
+•Edge locations – Network of data centers 
+that CloudFront uses to serve popular content 
+quickly to customers.
+•Regional edge cache – CloudFront 
+location that caches content that is not 
+popular enough to stay at an edge location. 
+It is located between the origin server and 
+the global edge location. 
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.60
+
+Amazon CloudFront benefits
+•Fast and global
+•Security at the edge
+•Highly programmable
+•Deeply integrated with AWS
+•Cost-effective
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.61
+
+Amazon CloudFront pricing
+Data transfer out
+•Charged for the volume of data transferred out from Amazon CloudFront edge location 
+to the internet or to your origin.
+HTTP(S) requests
+•Charged for number of HTTP(S) requests.
+Invalidation requests
+•No additional charge for the first 1,000 paths that are requested for invalidation each 
+month. Thereafter, $0.005 per path that is requested for invalidation.
+Dedicated IP custom SSL
+•$600 per month for each custom SSL certificate that is associated with one or more 
+CloudFront distributions that use the Dedicated IP version of custom SSL certificate 
+support.
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.62
+
+Section 6 key 
+takeaways
+•A CDN is a globally distributed 
+system of caching servers that 
+accelerates delivery of content.
+•Amazon CloudFront is a fast CDN 
+service that securely delivers data, 
+videos, applications, and APIs over a 
+global infrastructure with low 
+latency and high transfer speeds.
+•Amazon CloudFront offers many 
+benefits.
+63© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+M o d u l e   5 :   N e t w o r k i n g   a n d   C o n t e n t   D e l i v e r y
+Module wrap-up
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Module summary                                    
+In summary, in this module you learned how to:
+•Recognize the basics of networking
+•Describe virtual networking in the cloud with Amazon VPC
+•Label a network diagram
+•Design a basic VPC architecture
+•Indicate the steps to build a VPC
+•Identify security groups
+•Create your own VPC and added additional components to it to produce a customized 
+network
+•Identify the fundamentals of Amazon Route 53
+•Recognize the benefits of Amazon CloudFront
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.65
+
+Complete the knowledge check
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.66
+
+Sample exam question
+Which AWS networking service enables a company to create a virtual network within 
+AWS?
+A.AWS Config
+B.Amazon Route 53
+C.AWS Direct Connect
+D.Amazon VPC
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.67
+
+Additional resources
+•Amazon VPC overview page
+•Amazon Virtual Private Cloud Connectivity Options whitepaper
+•One to Many: Evolving VPC Design AWS Architecture blog post
+•Amazon VPC User Guide
+•Amazon CloudFront overview page
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.68
+
+© 2019 Amazon Web Services, Inc. or its affiliates. All rights reserved. This work may not be reproduced or redistributed, in whole or in part, without prior written permission from Amazon 
+Web Services, Inc. Commercial copying, lending, or selling is prohibited. Corrections or feedback on the course, please email us at:aws-course-feedback@amazon.com. For all other 
+questions, contact us at: https://aws.amazon.com/contact-us/aws-training/. All trademarks are the property of their owners.
+Thank you

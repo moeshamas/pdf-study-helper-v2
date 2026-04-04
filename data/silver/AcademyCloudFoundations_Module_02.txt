@@ -1,0 +1,560 @@
+
+
+A W S   A c a d e m y   C l o u d   F o u n d a t i o n s
+Module 2: Cloud Economics and Billing
+© 2019, Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Module overview
+Topics
+•Fundamentals of pricing
+•Total Cost of Ownership
+•Simple Monthly Calculator 
+•Introduction to AWS Organizations
+•AWS Billing and Cost Management
+•Overview of AWS Technical Support plans and costs
+Demo
+•Overview of the Billing Dashboard
+Activities
+•Simple Monthly Calculator
+•Support plans scavenger hunt
+Knowledge check
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.2
+
+Module objectives
+After completing this module, you should be able to:
+•Explain the AWS pricing philosophy
+•Recognize fundamental pricing characteristics
+•Indicate the elements of total cost of ownership
+•Discuss the results of the Simple Monthly Calculator
+•Identify how to set up an organizational structure that simplifies billing and account 
+visibility to review cost data.
+•Identify the functionality in the AWS Billing Dashboard
+•Describe how to use AWS Bills, AWS Cost Explorer, AWS Budgets, and AWS Cost and 
+Usage Reports
+•Identify the various AWS technical support plans and features
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.3
+
+M o d u l e   2 :   C l o u d   E c o n o m i c s   a n d   B i l l i n g
+Section 1: Fundamentals of pricing
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+AWS pricing model
+Three fundamental drivers of cost with AWS
+Compute
+•Charged per hour/second*
+•Varies by instance type
+*Linux only
+Storage
+•Charged typically per GB
+Data transfer
+•Outbound is aggregated and 
+charged
+•Inbound has no charge (with 
+some exceptions)
+•Charged typically per GB
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.5
+
+How do you pay for AWS?
+Pay for what you usePay less when you reservePay less when you use 
+more and as AWS 
+grows
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.6
+
+Pay for what you use
+Pay only for the services that you consume, with no large 
+upfront expenses.
+AWS
+On premises
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.7
+
+Pay less when you reserve
+Invest in Reserved 
+Instances (RIs):
+•Save up to 75 percent
+•Options:
+•All Upfront Reserved 
+Instance (AURI) → largest 
+discount
+•Partial Upfront Reserved 
+Instance (PURI) → lower 
+discounts
+•No Upfront Payments 
+Reserved Instance 
+(NURI) → smaller discount
+On
+Demand
+NURIPURIAURI
+EC2
+instance
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.8
+
+Pay less by using more
+Realize volume-based discounts:
+•Savings as usage increases.
+•Tiered pricing for services like Amazon 
+Simple Storage Service (Amazon S3), Amazon 
+Elastic Block Store (Amazon EBS), or Amazon 
+Elastic File System (Amazon EFS) → the more 
+you use, the less you pay per GB.
+•Multiple storage services deliver lower 
+storage costs based on needs.
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.9
+
+Pay even less as AWS grows
+As AWS grows:
+•AWS focuses on lowering cost of doing business.
+•This practice results in AWS passing savings from economies 
+of scale to you.
+•Since 2006, AWS has lowered pricing 75 times (as of 
+September 2019).
+•Future higher-performing resources replace current resources 
+for no extra charge.
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.10
+
+Custom pricing
+•Meet varying needs through custom pricing.
+•Available for high-volume projects with unique 
+requirements.
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.11
+
+AWS Free Tier
+Enables you to gain free hands-on experience with 
+the AWS platform, products, and services. Free for 1 year for new 
+customers.
+Sign up for an 
+AWS account
+Learn with 10-
+minute tutorials
+Start building
+with AWS
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.12
+
+Services with no charge
+Amazon VPC
+Elastic Beanstalk**
+Auto Scaling**
+AWS CloudFormation**
+AWS Identity and Access 
+Management (IAM)
+**Note: There might be 
+charges associated with other 
+AWS services that are used 
+with these services. 
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.13
+
+Key takeaways
+•There is no charge for:
+•Inbound data transfer.
+•Data transfer between services within 
+the same AWS Region.
+•Pay for what you use.
+•Start and stop anytime.
+•No long-term contracts are required.
+•Some services are free, but the other 
+AWS services that they provision 
+might not be free.
+14© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+M o d u l e   2 :   C l o u d   E c o n o m i c s   a n d   B i l l i n g
+Section 2: Total Cost of Ownership 
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+On-premises versus cloud
+Traditional Infrastructure
+AWS Cloud
+Equipment
+Resources and 
+administration
+CostContracts
+Scale up 
+and down
+No upfront 
+expense—pay for 
+what you use
+Improve time to 
+market and agility
+Self-service 
+infrastructure
+≠
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.16
+
+What is Total Cost of Ownership (TCO)?                                                   
+Total Cost of Ownership (TCO) is the financial 
+estimate to help identify direct and indirect 
+costs of a system.
+Why use TCO?
+•To compare the costs of running an entire 
+infrastructure environment or specific 
+workload on-premises versus on AWS
+•To budget and build the business case for 
+moving to the cloud
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.17
+
+TCO considerations
+Server administration costs
+4
+IT Labor Costs
+Hardware: Server, rack chassis 
+power distribution units (PDUs), 
+top-of-rack (TOR) switches (and 
+maintenance)
+Software: Operating system 
+(OS), virtualization licenses
+(and maintenance)
+Facilities cost
+SpacePowerCooling
+Server Costs
+1
+Hardware: Storage disks, storage 
+area network (SAN) or Fibre 
+Channel (FC) switches
+Storage administration costs
+Facilities cost
+SpacePowerCooling
+Storage Costs
+2
+Network hardware: Local area 
+network (LAN) switches, load 
+balancer bandwidth costs
+Network administration costs
+Facilities cost
+SpacePowerCooling
+Network Costs
+3
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.18
+
+On-premises versus all-in-cloud
+You could save up to 96 percent a year by moving your infrastructure to AWS. 
+Your 3-year total savings would be $159,913.
+AWS cost includes business-level support and 
+a 3-year PURI EC2 instance
+0
+50000
+100000
+150000
+200000
+250000
+300000
+350000
+400000
+On-PremisesAWS
+ServerStorageNetworkIT-LaborTotal
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.19
+
+AWS Simple Monthly Calculator
+Use the Simple Monthly 
+Calculator to:
+•Estimate monthly costs
+•Identify opportunities to 
+reduce monthly costs
+•Use templates to compare 
+services and deployment 
+models
+Access the Simple Monthly 
+Calculator:
+http://calculator.s3.amazonaws.com/index.html
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.20
+
+AWS TCO calculator
+Use the TCO Calculator to:
+•Estimate cost savings
+•Use detailed reports
+•Modify assumptions
+Access the TCO Calculator
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.21
+
+Additional benefit considerations
+Hard benefits
+•Reduced spending on compute, 
+storage, networking, security
+•Reductions in hardware and software 
+purchases (capex)
+•Reductions in operational costs, 
+backup, and disaster recovery
+•Reduction in operations personnel
+Soft Benefits
+•Reuse of service and applications 
+that enable you to define (and 
+redefine solutions) by using the 
+same cloud service
+•Increased developer productivity
+•Improved customer satisfaction 
+•Agile business processes that can 
+quickly respond to new and 
+emerging opportunities
+•Increase in global reach
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.22
+
+Case study: Total Cost Of Ownership                                                   
+Background:
+•Growing global company with over 200 locations
+•500 million customers, $3 billion annual revenue 
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.23
+
+Case study: Total Cost of Ownership                                                   
+Background:
+Challenge:
+•Growing global company with over 200 locations
+•500 million customers, $3 billion annual revenue
+•Meet demand to rapidly deploy new solutions
+•Constantly upgrade aging equipment
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.24
+
+Case study: Total Cost of Ownership                                                   
+Background:
+Challenge:
+Criteria:
+•Growing global company with over 200 locations
+•500 million customers, $3 billion annual revenue
+•Meet demand to rapidly deploy new solutions
+•Constantly upgrade aging equipment
+•Broad solution to handle all workloads
+•Ability to modify processes to improve efficiency and lower costs
+•Eliminate busy work (such as patching software)
+•Achieve a positive return on investment (ROI)
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.25
+
+Case study: Total Cost of Ownership                                                   
+Background:
+Challenge:
+Criteria:
+Solution:
+•Is a growing global company with over 200 locations
+•Have 500 million customers, $3 billion (USD) annual revenue
+•Meet demand to rapidly deploy new solutions
+•Constantly upgrade aging equipment
+•Have a broad solution to handle all workloads
+•Be able to modify processes to improve efficiency and lower costs
+•Eliminate busy work (such as patching software)
+•Achieve a positive return on investment (ROI)
+•Moved their on-premises data center to AWS
+•Eliminated 205 servers (90 percent)
+•Moved nearly all applications to AWS 
+•Used 3-year Amazon EC2 Reserved Instances
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.26
+
+Case study: Total Cost of Ownership                                                   
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.27
+
+Case study: Total Cost of Ownership                                                   
+Results:
+Business Goals:
+Growth
+Enhanced 24/7 business
+Operational efficiency
+Speed to market
+•One day to provision new 
+businesses
+•Just minutes to push out a 
+service
+Resource
+optimization
+•Robust security 
+compliance
+•Enhanced disaster 
+recovery
+•Increased computing 
+capacity
+Operational 
+efficiency
+•Continuous cost 
+optimization and 
+reduction
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.28
+
+Activity: Simple Monthly Calculator activity 
+•Break up into groups of four or five and use the specifications provided to develop a 
+cost estimate using the Amazon Simple Monthly Calculator
+•Be prepared to report your findings back to the class.
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.29
+
+M o d u l e   2 :   C l o u d   E c o n o m i c s   a n d   B i l l i n g
+Section 3: Billing 
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Introduction to AWS Organizations
+AWS Organizations
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.31
+
+AWS Organizations terminology
+*Organizational Units (OUs) 
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+32
+
+Key features and benefits
+Consolidated billing
+Policy-based account management
+Group based account management
+Application programming interfaces (APIs) 
+that automate account management
+AWS
+Organizations
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.33
+
+Security with AWS Organizations
+Control access with 
+AWS Identity and 
+Access Management 
+(IAM).
+IAM policies enable you 
+to allow or deny access 
+to AWS services for 
+users, groups, and roles.
+Service control policies 
+(SCPs) enable you to 
+allow or deny access to 
+AWS services for 
+individuals or group 
+accounts in an 
+organizational unit (OU). 
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.34
+
+Organizations setup
+Step 1
+Step 2
+Step 3
+Step 4
+Create 
+Organization
+Create 
+organizational
+units
+Create 
+service
+control
+policies
+Test
+restrictions
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.35
+
+Limits of AWS Organizations
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.36
+
+Accessing AWS Organizations
+AWS
+Organizations
+AWS Management Console
+AWS Command Line 
+Interface (AWS CLI) tools
+Software development kits 
+(SDKs) 
+HTTPS Query application 
+programming interfaces (API)
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.37
+
+Introducing AWS Billing and Cost 
+Management
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.38
+
+AWS Billing Dashboard
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.39
+
+Tools
+AWS Budgets
+AWS Cost and Usage Report
+AWS Cost Explorer
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.40
+
+Monthly bills
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.41
+
+Cost Explorer
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.42
+
+Forecast and track costs
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.43
+
+Cost and usage reporting
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.44
+
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+Recorded demo:
+Amazon Billing 
+dashboard
+45
+Amazon Billing 
+dashboard demo
+
+Billing dashboard demonstration
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.46
+
+M o d u l e   2 :   C l o u d   E c o n o m i c s   a n d   B i l l i n g
+Section 4: Technical support 
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+AWS support
+•Provide unique combination of tools and expertise:
+•AWS Support 
+•AWS Support Plans
+•Support is provided for:
+•Experimenting with AWS
+•Production use of AWS
+•Business-critical use of AWS
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.48
+
+AWS support
+•Proactive guidance :
+•Technical Account Manager (TAM)
+•Best practices :
+•AWS Trusted Advisor
+•Account assistance : 
+•AWS Support Concierge
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.49
+
+Support plans
+AWS Support offers four support plans:
+•Basic Support – Resource Center access, Service 
+Health Dashboard, product FAQs, discussion forums, 
+and support for health checks
+•Developer Support: Support for early development 
+on AWS
+•Business Support: Customers that run production 
+workloads
+•Enterprise Support: Customers that run business 
+and mission-critical workloads
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.50
+
+Case severity and response times                                                   
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.51
+
+Activity: Support plan scavenger hunt 
+•Break up into groups of four or five and develop a recommendation for the 
+best support plan for one of the business cases that are provided.
+•Be prepared to report your findings back to the class.
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.52
+
+M o d u l e   2 :   C l o u d   E c o n o m i c s   a n d   B i l l i n g
+Module wrap-up
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.
+
+Module summary                                                     
+•Explored the fundamental of AWS pricing
+•Reviewed TCO concepts 
+•Introduced the AWS Simple Monthly Calculator and the TCO Calculator
+•Reviewed the Billing dashboard
+•Reviewed Technical Support options and costs
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.54
+
+Complete the knowledge check
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.55
+
+Sample exam question
+Which AWS service provides infrastructure security optimization recommendations? 
+A.AWS Price List Application Programming Interface (API) 
+B.Reserved Instances 
+C.AWS Trusted Advisor
+D.Amazon Elastic Compute Cloud (Amazon EC2) Spot Fleet
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.56
+
+Additional resources
+•AWS Economics Center: http://aws.amazon.com/economics/
+•AWS TCO Calculator: https://awstcocalculator.com
+•Simple Monthly Calculator: https://calculator.s3.amazonaws.com/index.html
+•Case studies and research: http://aws.amazon.com/economics/
+•Additional pricing exercises: http://awscostlabs.com
+© 2019 Amazon Web Services, Inc. or its Affiliates. All rights reserved.57
+
+© 2019 Amazon Web Services, Inc. or its affiliates. All rights reserved. This work may not be reproduced or redistributed, in whole or in part, without prior written permission from Amazon 
+Web Services, Inc. Commercial copying, lending, or selling is prohibited. Corrections or feedback on the course, please email us at:aws-course-feedback@amazon.com. For all other 
+questions, contact us at: https://aws.amazon.com/contact-us/aws-training/. All trademarks are the property of their owners.
+Thank you
