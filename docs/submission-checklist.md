@@ -15,7 +15,7 @@
 - [x] unit tests pass
 - [x] Playwright test passes
 - [x] Playwright MCP evidence saved
-- [ ] architecture improvement evidence saved
+- [x] architecture improvement evidence saved
 
 ## Deployment
 - [ ] public GitHub repo created
