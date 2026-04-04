@@ -13,8 +13,8 @@
 - [ ] reasoning layer works
 - [ ] UI works
 - [x] unit tests pass
-- [ ] Playwright test passes
-- [ ] Playwright MCP evidence saved
+- [x] Playwright test passes
+- [x] Playwright MCP evidence saved
 - [ ] architecture improvement evidence saved
 
 ## Deployment
