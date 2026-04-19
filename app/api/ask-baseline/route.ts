@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 
 const HF_API_KEY = process.env.HF_API_KEY;
-const MODEL = "HuggingFaceH4/zephyr-7b-beta";
 
 export async function POST(req: Request) {
   try {
@@ -15,7 +14,7 @@ export async function POST(req: Request) {
     }
 
     const response = await fetch(
-      "https://router.huggingface.co/hf-inference/models/" + MODEL,
+      "https://router.huggingface.co/v1/chat/completions",
       {
         method: "POST",
         headers: {
@@ -23,24 +22,35 @@ export async function POST(req: Request) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          inputs: `Answer the following question:\n${question}`,
+          model: "openai/gpt-oss-120b:fastest",
+          stream: false,
+          messages: [
+            {
+              role: "system",
+              content:
+                "You are a general assistant. Answer the user's question as best as you can, but you are not given any retrieved document context. Keep the answer concise.",
+            },
+            {
+              role: "user",
+              content: question,
+            },
+          ],
         }),
       }
     );
 
     const data = await response.json();
 
-    let answer = "No response from baseline model.";
-
-    if (Array.isArray(data) && data[0]?.generated_text) {
-      answer = data[0].generated_text;
-    } else if (data?.generated_text) {
-      answer = data.generated_text;
-    } else if (data?.error) {
-      answer = "Error: " + data.error;
-    } else {
-      answer = JSON.stringify(data);
+    if (!response.ok) {
+      return NextResponse.json({
+        answer: `Error: ${data?.error || "Baseline API request failed."}`,
+        sources: [],
+      });
     }
+
+    const answer =
+      data?.choices?.[0]?.message?.content?.trim() ||
+      "No response from baseline model.";
 
     return NextResponse.json({
       answer,
@@ -48,7 +58,7 @@ export async function POST(req: Request) {
     });
   } catch (error) {
     return NextResponse.json(
-      { answer: "Baseline API error", sources: [] },
+      { answer: "Baseline API error.", sources: [] },
       { status: 500 }
     );
   }
