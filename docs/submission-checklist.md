@@ -44,3 +44,9 @@
 - [x] I included at least 5 representative cases
 - [x] I included at least 2 failure cases
 - [x] I defined a lightweight baseline
+
+## Assignment 6 - Evaluation Metrics
+- [x] I defined output quality metric
+- [x] I defined end-to-end success metric
+- [x] I defined upstream component metric (retrieval)
+- [x] I justified my metrics
