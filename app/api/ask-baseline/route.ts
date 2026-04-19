@@ -23,9 +23,17 @@ export async function POST(req: Request) {
 
     const data = await response.json();
 
-    const answer =
-      data?.[0]?.generated_text ||
-      "No response from baseline model.";
+    let answer = "No response from baseline model.";
+
+    if (Array.isArray(data) && data[0]?.generated_text) {
+        answer = data[0].generated_text;
+    } else if (data?.generated_text) {
+        answer = data.generated_text;
+    } else if (data?.error) {
+        answer = "Error: " + data.error;
+    } else {
+        answer = JSON.stringify(data);
+    }
 
     return NextResponse.json({
       answer,
