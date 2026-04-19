@@ -90,5 +90,51 @@
     "end_to_end": "success",
     "retrieval": "poor"
   }
+},
+{
+  "baseline_results": [
+    {
+      "question": "What does EC2 do?",
+      "answer": "Amazon EC2 (Elastic Compute Cloud) is a core AWS service that provides flexible, on-demand computing power.",
+      "sources": [],
+      "evaluation": "correct_but_generic"
+    },
+    {
+      "question": "What is an AMI?",
+      "answer": "An AMI (Amazon Machine Image) is a pre-configured template used to create instances with a specific setup.",
+      "sources": [],
+      "evaluation": "correct_but_generic"
+    },
+    {
+      "question": "How do you launch an EC2 instance?",
+      "answer": "Launching an Amazon EC2 instance can be done through AWS tools using IP and credentials.",
+      "sources": [],
+      "evaluation": "vague_or_incomplete"
+    },
+    {
+      "question": "What is the purpose of security groups?",
+      "answer": "Security groups are virtual firewalls that control traffic and follow least-privilege principles.",
+      "sources": [],
+      "evaluation": "correct_but_generic"
+    },
+    {
+      "question": "What is the difference between EC2 and an AMI?",
+      "answer": "EC2 is a cloud computing service, while an AMI is a template used to configure instances.",
+      "sources": [],
+      "evaluation": "partially_correct"
+    },
+    {
+      "question": "What are the disadvantages of EC2 compared with Azure virtual machines?",
+      "answer": "AWS EC2 may be more complex and Azure VMs can feel less cumbersome.",
+      "sources": [],
+      "evaluation": "hallucinated"
+    },
+    {
+      "question": "Can you summarize the graph showing performance trends in the PDF?",
+      "answer": "I’m unable to view the PDF, so I cannot summarize the graph.",
+      "sources": [],
+      "evaluation": "correct_limitation"
+    }
+  ]
 }
 ]
